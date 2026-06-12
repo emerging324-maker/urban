@@ -14,13 +14,12 @@
   --g700:#334155;--g800:#1e293b;
   --green:#16a34a;--greenl:#dcfce7;
   --red:#dc2626;--redl:#fee2e2;
-  --yellow:#ca8a04;--yellowl:#fef9c3;
   --sw:255px;--hh:60px;
-  --sh:0 2px 12px rgba(15,30,54,.12);
-  --sh2:0 8px 32px rgba(15,30,54,.2);
+  --sh:0 2px 12px rgba(15,30,54,.12);--sh2:0 8px 32px rgba(15,30,54,.2);
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--g50);color:var(--g800);font-size:14px;min-height:100vh;}
+/* LOGIN */
 #ls{display:flex;min-height:100vh;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--navy) 0%,var(--navy3) 60%,#1a5fa8 100%);padding:20px;}
 .lcard{background:#fff;border-radius:18px;padding:44px 40px;width:100%;max-width:400px;box-shadow:var(--sh2);}
 .llogo{text-align:center;margin-bottom:30px;}
@@ -37,8 +36,10 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--g50);color:var
 .lbtn{width:100%;background:linear-gradient(135deg,var(--blue),var(--bluel));color:#fff;border:none;border-radius:10px;padding:13px;font-size:15px;font-weight:700;cursor:pointer;transition:.2s;margin-top:4px;}
 .lbtn:hover{opacity:.9;transform:translateY(-1px);}
 .lcreds{margin-top:18px;background:var(--g50);border-radius:8px;padding:11px 13px;font-size:11px;color:var(--g500);}
+/* APP */
 #app{display:none;min-height:100vh;}
 .awrap{display:flex;min-height:100vh;}
+/* SIDEBAR */
 .sb{width:var(--sw);background:var(--navy);color:#fff;display:flex;flex-direction:column;position:fixed;top:0;left:0;height:100vh;overflow-y:auto;z-index:200;transition:.3s;}
 .sbbrand{padding:18px 16px 14px;border-bottom:1px solid rgba(255,255,255,.07);display:flex;align-items:center;gap:10px;}
 .sbico{width:36px;height:36px;background:linear-gradient(135deg,var(--orange),#c96010);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:900;flex-shrink:0;}
@@ -57,14 +58,17 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--g50);color:var
 .urole{font-size:10px;color:rgba(255,255,255,.35);}
 .logoutbtn{background:none;border:none;color:rgba(255,255,255,.35);font-size:15px;cursor:pointer;padding:4px 6px;border-radius:5px;transition:.15s;}
 .logoutbtn:hover{color:#fff;background:rgba(255,255,255,.1);}
+/* MAIN */
 .amain{margin-left:var(--sw);flex:1;display:flex;flex-direction:column;}
 .ahdr{height:var(--hh);background:#fff;border-bottom:1px solid var(--g200);display:flex;align-items:center;padding:0 22px;gap:12px;position:sticky;top:0;z-index:100;box-shadow:0 1px 3px rgba(0,0,0,.04);}
 .hmenu{background:none;border:none;font-size:19px;cursor:pointer;color:var(--g500);display:none;}
 .htitle{font-size:16px;font-weight:800;color:var(--navy);flex:1;}
 .htime{font-size:11.5px;color:var(--g400);}
 .acon{padding:22px;flex:1;}
+/* PAGES */
 .pg{display:none;}
 .pg.active{display:block;}
+/* COMMON */
 .phd{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:10px;}
 .phd h2{font-size:19px;font-weight:800;color:var(--navy);}
 .btn{border:none;border-radius:8px;padding:9px 17px;font-size:13px;font-weight:600;cursor:pointer;transition:.15s;display:inline-flex;align-items:center;gap:6px;}
@@ -74,56 +78,55 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--g50);color:var
 .bo:hover{background:#d96a10;}
 .bout{background:transparent;color:var(--blue);border:1.5px solid var(--blue);}
 .bout:hover{background:#e8f0fb;}
-.bsm{padding:6px 12px;font-size:12px;}
+.bsm{padding:5px 11px;font-size:12px;}
+.bxsm{padding:3px 8px;font-size:11px;}
 .bdanger{background:var(--redl);color:var(--red);}
 .bdanger:hover{background:#fca5a5;}
-.bwa{background:#25D366;color:#fff;}
-.bwa:hover{background:#128C7E;}
+.bgreen{background:var(--greenl);color:var(--green);}
+/* STATS */
 .sgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:14px;margin-bottom:20px;}
 .sc{background:#fff;border-radius:11px;padding:18px;box-shadow:var(--sh);display:flex;align-items:center;gap:14px;border-left:4px solid transparent;transition:.2s;}
 .sc:hover{transform:translateY(-2px);box-shadow:var(--sh2);}
-.sc-b{border-left-color:var(--blue);}
-.sc-o{border-left-color:var(--orange);}
-.sc-g{border-left-color:var(--green);}
-.sc-p{border-left-color:#7c3aed;}
+.sc-b{border-left-color:var(--blue);}.sc-o{border-left-color:var(--orange);}
+.sc-g{border-left-color:var(--green);}.sc-p{border-left-color:#7c3aed;}
 .sico{width:44px;height:44px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
-.ico-b{background:#e8f0fb;}
-.ico-o{background:#fff0e5;}
-.ico-g{background:var(--greenl);}
-.ico-p{background:#ede9fe;}
+.ico-b{background:#e8f0fb;}.ico-o{background:#fff0e5;}.ico-g{background:var(--greenl);}.ico-p{background:#ede9fe;}
 .sval{font-size:24px;font-weight:800;color:var(--g800);line-height:1;}
 .slbl{font-size:11px;color:var(--g400);margin-top:3px;}
+/* PANELS */
 .drow{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
 .panel{background:#fff;border-radius:11px;box-shadow:var(--sh);}
 .phd2{padding:13px 17px;border-bottom:1px solid var(--g100);display:flex;align-items:center;justify-content:space-between;}
 .phd2 h3{font-size:13.5px;font-weight:700;color:var(--navy);}
 .pbd{padding:14px 17px;}
+/* TABLE */
 .twrap{background:#fff;border-radius:11px;box-shadow:var(--sh);overflow:hidden;}
 table{width:100%;border-collapse:collapse;}
 th{background:var(--g50);padding:9px 13px;text-align:left;font-size:11px;font-weight:700;color:var(--g500);text-transform:uppercase;letter-spacing:.4px;border-bottom:1px solid var(--g200);}
-td{padding:10px 13px;font-size:13px;color:var(--g700);border-bottom:1px solid var(--g50);}
+td{padding:9px 13px;font-size:13px;color:var(--g700);border-bottom:1px solid var(--g50);}
 tr:last-child td{border-bottom:none;}
 tr:hover td{background:#fafcff;}
-.acell{display:flex;gap:5px;flex-wrap:wrap;}
+.acell{display:flex;gap:4px;flex-wrap:wrap;}
+/* SEARCH */
 .srow{display:flex;align-items:center;gap:9px;margin-bottom:13px;flex-wrap:wrap;}
 .sbox{display:flex;align-items:center;gap:7px;background:#fff;border:1.5px solid var(--g200);border-radius:9px;padding:7px 12px;flex:1;max-width:300px;}
 .sbox input{border:none;outline:none;font-size:13px;width:100%;color:var(--g800);background:transparent;}
+/* BADGE */
 .bdg{display:inline-block;padding:3px 8px;border-radius:20px;font-size:11px;font-weight:600;}
-.b-blue{background:#dbeafe;color:#1e40af;}
-.b-green{background:var(--greenl);color:#166534;}
-.b-red{background:var(--redl);color:#991b1b;}
-.b-yellow{background:var(--yellowl);color:#854d0e;}
-.b-orange{background:#ffedd5;color:#9a3412;}
-.b-purple{background:#ede9fe;color:#5b21b6;}
-.ov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:500;align-items:flex-start;justify-content:center;padding:22px 14px;overflow-y:auto;}
+.b-blue{background:#dbeafe;color:#1e40af;}.b-green{background:var(--greenl);color:#166534;}
+.b-red{background:var(--redl);color:#991b1b;}.b-yellow{background:#fef9c3;color:#854d0e;}
+.b-orange{background:#ffedd5;color:#9a3412;}.b-purple{background:#ede9fe;color:#5b21b6;}
+/* OVERLAY */
+.ov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.52);z-index:500;align-items:flex-start;justify-content:center;padding:18px 14px;overflow-y:auto;}
 .ov.open{display:flex;}
-.mdl{background:#fff;border-radius:15px;width:100%;max-width:720px;margin:auto;box-shadow:0 20px 60px rgba(0,0,0,.22);}
-.mhd{padding:17px 21px;border-bottom:1px solid var(--g100);display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:#fff;z-index:1;border-radius:15px 15px 0 0;}
+.mdl{background:#fff;border-radius:15px;width:100%;max-width:680px;margin:auto;box-shadow:0 20px 60px rgba(0,0,0,.22);}
+.mhd{padding:16px 20px;border-bottom:1px solid var(--g100);display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:#fff;z-index:1;border-radius:15px 15px 0 0;}
 .mhd h2{font-size:15px;font-weight:800;color:var(--navy);}
 .mclose{background:none;border:none;font-size:21px;cursor:pointer;color:var(--g400);line-height:1;padding:2px 5px;border-radius:5px;}
 .mclose:hover{background:var(--g100);}
 .mbd{padding:20px;}
-.mft{padding:13px 21px;border-top:1px solid var(--g100);display:flex;justify-content:flex-end;gap:9px;}
+.mft{padding:13px 20px;border-top:1px solid var(--g100);display:flex;justify-content:flex-end;gap:9px;}
+/* FORM */
 .fg{display:flex;flex-direction:column;gap:5px;margin-bottom:13px;}
 .fg label{font-size:11px;font-weight:700;color:var(--g600);text-transform:uppercase;letter-spacing:.4px;}
 .fg input,.fg select,.fg textarea{border:1.5px solid var(--g200);border-radius:7px;padding:9px 11px;font-size:13.5px;font-family:inherit;transition:.2s;background:#fff;color:var(--g800);width:100%;}
@@ -131,24 +134,27 @@ tr:hover td{background:#fafcff;}
 .fg textarea{resize:vertical;min-height:70px;}
 .fgrid{display:grid;grid-template-columns:1fr 1fr;gap:0 15px;}
 .fgrid .fg.full{grid-column:1/-1;}
-.fgrid .fg.third{grid-column:span 1;}
 .fsec{font-size:11px;font-weight:800;color:var(--blue);text-transform:uppercase;letter-spacing:1px;padding:10px 0 3px;border-bottom:2px solid var(--g100);margin-bottom:6px;grid-column:1/-1;}
+/* CHARTS */
 .barchart{display:flex;align-items:flex-end;gap:7px;height:130px;padding:4px 0;}
 .bc-col{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;}
 .bc-bar{background:linear-gradient(to top,var(--blue),var(--bluel));border-radius:3px 3px 0 0;width:100%;min-height:3px;transition:.4s;}
 .bc-bar.org{background:linear-gradient(to top,var(--orange),var(--orangel));}
 .bcval{font-size:9.5px;color:var(--g600);font-weight:600;}
 .bclbl{font-size:9.5px;color:var(--g400);}
+/* CONDITIONS */
 .crow{display:flex;align-items:center;gap:9px;padding:7px 0;border-bottom:1px solid var(--g50);}
 .crow:last-child{border:none;}
-.cname{width:130px;font-size:12px;color:var(--g700);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.cname{width:120px;font-size:12px;color:var(--g700);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 .cbwrap{flex:1;background:var(--g100);border-radius:3px;height:9px;}
 .cbfill{background:linear-gradient(to right,var(--blue),var(--bluel));height:100%;border-radius:3px;transition:.4s;}
 .ccount{font-size:12px;font-weight:700;color:var(--g600);min-width:24px;text-align:right;}
+/* FILTERS */
 .ftabs{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:14px;}
 .ftab{padding:5px 13px;border-radius:20px;font-size:12px;font-weight:600;cursor:pointer;border:1.5px solid var(--g200);background:#fff;color:var(--g600);transition:.15s;}
 .ftab:hover{border-color:var(--blue);color:var(--blue);}
 .ftab.active{background:var(--blue);color:#fff;border-color:var(--blue);}
+/* SETUP */
 .setupcard{background:#fff;border-radius:13px;box-shadow:var(--sh);padding:28px;max-width:660px;}
 .setupcard h3{font-size:15px;font-weight:800;color:var(--navy);margin-bottom:5px;}
 .setupcard > p{font-size:13px;color:var(--g500);margin-bottom:22px;line-height:1.6;}
@@ -159,39 +165,36 @@ tr:hover td{background:#fafcff;}
 .stepb p{font-size:12px;color:var(--g500);line-height:1.5;}
 .urlstat{display:flex;align-items:center;gap:7px;margin-top:9px;font-size:12px;}
 .udot{width:8px;height:8px;border-radius:50%;}
-.dg{background:var(--green);}
-.dr{background:var(--red);}
-.dgray{background:var(--g300);}
-.empty{text-align:center;padding:44px 16px;color:var(--g400);}
-.empty .ei{font-size:40px;margin-bottom:9px;}
+.dg{background:var(--green);}.dr{background:var(--red);}.dgray{background:var(--g300);}
+/* EMPTY */
+.empty{text-align:center;padding:40px 16px;color:var(--g400);}
+.empty .ei{font-size:38px;margin-bottom:9px;}
 .empty h3{font-size:14px;font-weight:700;color:var(--g600);margin-bottom:4px;}
 .empty p{font-size:12px;line-height:1.5;}
+/* TOAST */
 #tw{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);z-index:9999;display:flex;flex-direction:column;align-items:center;gap:6px;pointer-events:none;}
 .toast{background:var(--g800);color:#fff;padding:10px 18px;border-radius:9px;font-size:13px;font-weight:500;box-shadow:var(--sh2);animation:tin .3s ease;display:flex;align-items:center;gap:7px;}
-.tok{background:#166534;}
-.terr{background:#991b1b;}
+.tok{background:#166534;}.terr{background:#991b1b;}
 @keyframes tin{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+/* LOADER */
 .loader{position:fixed;inset:0;background:rgba(15,30,54,.55);z-index:999;display:none;align-items:center;justify-content:center;}
 .loader.on{display:flex;}
 .lbox{background:#fff;border-radius:13px;padding:28px 36px;text-align:center;box-shadow:var(--sh2);}
 .lbox p{margin-top:10px;font-size:13px;color:var(--g600);}
 .spin{display:inline-block;width:28px;height:28px;border:3px solid var(--g200);border-top-color:var(--blue);border-radius:50%;animation:sp .7s linear infinite;}
 @keyframes sp{to{transform:rotate(360deg);}}
+/* CODEBLOCK */
 .codeblock{background:var(--navy);border-radius:9px;padding:14px;overflow-x:auto;max-height:320px;overflow-y:auto;}
 .codeblock pre{color:#93c5fd;font-size:11px;line-height:1.7;white-space:pre-wrap;font-family:monospace;}
-/* Pain Scale */
-.painscale{display:flex;gap:0;border-radius:8px;overflow:hidden;border:1.5px solid var(--g200);grid-column:1/-1;}
-.pslot{flex:1;display:flex;flex-direction:column;align-items:center;padding:7px 3px;cursor:pointer;font-size:11px;font-weight:700;transition:.15s;border-right:1px solid rgba(255,255,255,.3);}
-.pslot:last-child{border-right:none;}
-.pslot.sel{outline:3px solid var(--navy);outline-offset:-2px;}
-/* Body Chart */
-.bodychart-wrap{display:flex;gap:14px;justify-content:center;grid-column:1/-1;flex-wrap:wrap;}
-.bodychart-side{display:flex;flex-direction:column;align-items:center;gap:6px;}
-.bodychart-side span{font-size:11px;font-weight:700;color:var(--g500);text-transform:uppercase;letter-spacing:.5px;}
-.bodychart-side canvas{border:1.5px solid var(--g200);border-radius:8px;cursor:crosshair;background:#fff;}
-.bc-btns{display:flex;gap:6px;grid-column:1/-1;}
-/* Add Patient page */
-.addpat-wrap{max-width:820px;}
+/* PRINT */
+@media print{
+  .sb,.ahdr,.no-print{display:none!important;}
+  .amain{margin-left:0!important;}
+  body{background:#fff;}
+  .print-area{display:block!important;}
+}
+.print-area{display:none;}
+/* RESPONSIVE */
 @media(max-width:768px){
   .sb{transform:translateX(-100%);}
   .sb.open{transform:translateX(0);}
@@ -200,14 +203,16 @@ tr:hover td{background:#fafcff;}
   .drow{grid-template-columns:1fr;}
   .fgrid{grid-template-columns:1fr;}
   .fgrid .fg.full{grid-column:1;}
-  .acell{flex-direction:column;}
+  .sgrid{grid-template-columns:1fr 1fr;}
 }
 </style>
 </head>
 <body>
-
 <div class="loader" id="loader"><div class="lbox"><div class="spin"></div><p id="lmsg">Loading…</p></div></div>
 <div id="tw"></div>
+
+<!-- PRINT AREA -->
+<div class="print-area" id="printArea"></div>
 
 <!-- LOGIN -->
 <div id="ls">
@@ -237,7 +242,7 @@ tr:hover td{background:#fafcff;}
   <div class="sbsec">Main</div>
   <div class="ni active" data-pg="dashboard" onclick="nav(this)"><span class="ic">📊</span>Dashboard</div>
   <div class="ni" data-pg="patients" onclick="nav(this)"><span class="ic">👥</span>Patients</div>
-  <div class="ni" data-pg="addpatient" onclick="nav(this)"><span class="ic">➕</span>Add Patient</div>
+  <div class="ni" data-pg="assessments" onclick="nav(this)"><span class="ic">📋</span>Assessments</div>
   <div class="ni" data-pg="appointments" onclick="nav(this)"><span class="ic">📅</span>Appointments</div>
   <div class="sbsec">Finance</div>
   <div class="ni" data-pg="payments" onclick="nav(this)"><span class="ic">💳</span>Payments</div>
@@ -253,20 +258,18 @@ tr:hover td{background:#fafcff;}
     </div>
   </div>
 </aside>
-
 <main class="amain">
   <header class="ahdr">
     <button class="hmenu" onclick="toggleSB()">☰</button>
     <span class="htitle" id="htitle">Dashboard</span>
     <span class="htime" id="hclock"></span>
-    <button class="btn bp bsm" onclick="nav(document.querySelector('[data-pg=appointments]'))">+ Appointment</button>
+    <button class="btn bp bsm no-print" onclick="nav(document.querySelector('[data-pg=appointments]'))">+ Appointment</button>
   </header>
-
   <div class="acon">
 
 <!-- DASHBOARD -->
 <div class="pg active" id="pg-dashboard">
-  <div class="phd"><h2>Dashboard</h2><button class="btn bout bsm" onclick="loadDash()">↺ Refresh</button></div>
+  <div class="phd"><h2>Dashboard</h2><button class="btn bout bsm no-print" onclick="refreshAll()">↺ Refresh</button></div>
   <div class="sgrid">
     <div class="sc sc-b"><div class="sico ico-b">👥</div><div><div class="sval" id="d-tp">—</div><div class="slbl">Total Patients</div></div></div>
     <div class="sc sc-o"><div class="sico ico-o">📅</div><div><div class="sval" id="d-ta">—</div><div class="slbl">Today's Appointments</div></div></div>
@@ -274,150 +277,60 @@ tr:hover td{background:#fafcff;}
     <div class="sc sc-p"><div class="sico ico-p">📆</div><div><div class="sval" id="d-mr">—</div><div class="slbl">Monthly Revenue</div></div></div>
   </div>
   <div class="drow">
-    <div class="panel"><div class="phd2"><h3>Top Conditions</h3><span style="font-size:11px;color:var(--g400);">From Chief Complaints</span></div><div class="pbd" id="d-conds"><div class="empty"><div class="ei">📋</div><p>No data yet</p></div></div></div>
-    <div class="panel"><div class="phd2"><h3>Revenue This Week</h3></div><div class="pbd"><div class="barchart" id="d-rvchart"><div class="empty" style="width:100%;font-size:12px;padding:20px 0;"><p>No payment data</p></div></div></div></div>
+    <div class="panel"><div class="phd2"><h3>Top Conditions</h3></div><div class="pbd" id="d-conds"><div class="empty"><div class="ei">📋</div><p>No assessment data yet</p></div></div></div>
+    <div class="panel"><div class="phd2"><h3>Revenue This Week</h3></div><div class="pbd"><div class="barchart" id="d-rvchart"><div class="empty" style="width:100%;font-size:12px;padding:16px 0;"><p>No payment data</p></div></div></div></div>
   </div>
   <div class="drow">
-    <div class="panel"><div class="phd2"><h3>Recent Patients</h3><button class="btn bout bsm" onclick="nav(document.querySelector('[data-pg=patients]'))">View All</button></div><div class="pbd" id="d-rp"><div class="empty"><div class="ei">👥</div><p>No patients yet</p></div></div></div>
-    <div class="panel"><div class="phd2"><h3>Recent Appointments</h3><button class="btn bout bsm" onclick="nav(document.querySelector('[data-pg=appointments]'))">View All</button></div><div class="pbd" id="d-ra"><div class="empty"><div class="ei">📅</div><p>No appointments yet</p></div></div></div>
-  </div>
-  <div class="drow">
-    <div class="panel"><div class="phd2"><h3>Recent Payments</h3><button class="btn bout bsm" onclick="nav(document.querySelector('[data-pg=payments]'))">View All</button></div><div class="pbd" id="d-rpay"><div class="empty"><div class="ei">💳</div><p>No payments yet</p></div></div></div>
-    <div class="panel" style="display:flex;flex-direction:column;justify-content:center;padding:18px;gap:10px;">
-      <div style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px;">Quick Actions</div>
-      <button class="btn bp" style="width:100%;" onclick="nav(document.querySelector('[data-pg=addpatient]'))">➕ New Patient Assessment</button>
-      <button class="btn bo" style="width:100%;" onclick="nav(document.querySelector('[data-pg=appointments]'));setTimeout(()=>openAppt(),200)">📅 Book Appointment</button>
-      <button class="btn bout" style="width:100%;" onclick="nav(document.querySelector('[data-pg=payments]'));setTimeout(()=>openPay(),200)">💳 Record Payment</button>
-    </div>
+    <div class="panel"><div class="phd2"><h3>Recent Patients</h3><button class="btn bout bsm no-print" onclick="nav(document.querySelector('[data-pg=patients]'))">View All</button></div><div class="pbd" id="d-rp"><div class="empty"><div class="ei">👥</div><p>No patients yet</p></div></div></div>
+    <div class="panel"><div class="phd2"><h3>Recent Appointments</h3><button class="btn bout bsm no-print" onclick="nav(document.querySelector('[data-pg=appointments]'))">View All</button></div><div class="pbd" id="d-ra"><div class="empty"><div class="ei">📅</div><p>No appointments yet</p></div></div></div>
   </div>
 </div>
 
 <!-- PATIENTS -->
 <div class="pg" id="pg-patients">
-  <div class="phd"><h2>Patients</h2><button class="btn bp" onclick="nav(document.querySelector('[data-pg=addpatient]'))">+ Add Patient</button></div>
+  <div class="phd"><h2>Patients</h2></div>
   <p style="font-size:13px;color:var(--g500);margin-bottom:13px;">Patients are created automatically when assessments are saved.</p>
   <div class="srow">
     <div class="sbox"><span style="color:var(--g400)">🔍</span><input type="text" id="psearch" placeholder="Search by name or phone…" oninput="renderPat()"/></div>
-    <button class="btn bout bsm" onclick="loadPat()">↺ Refresh</button>
+    <button class="btn bout bsm no-print" onclick="loadPat()">↺ Refresh</button>
   </div>
   <div class="twrap"><table><thead><tr><th>Patient ID</th><th>Name</th><th>Age</th><th>Gender</th><th>Phone</th><th>Occupation</th><th>Date Added</th><th>Actions</th></tr></thead><tbody id="ptbody"></tbody></table></div>
 </div>
 
-<!-- ADD PATIENT (Assessment Form) -->
-<div class="pg" id="pg-addpatient">
-  <div class="phd"><h2>Add Patient / New Assessment</h2></div>
-  <div class="addpat-wrap">
-    <div style="background:#fff;border-radius:13px;box-shadow:var(--sh);padding:24px;">
-      <div style="background:linear-gradient(120deg,var(--navy),var(--navy3));border-radius:10px;padding:16px 20px;color:#fff;margin-bottom:20px;display:flex;align-items:center;justify-content:space-between;">
-        <div><div style="font-size:15px;font-weight:800;">Physiotherapy Assessment Form</div><div style="font-size:12px;opacity:.7;margin-top:2px;">Urban Physio Center · Dr. S. Ramesh PT</div></div>
-        <div style="font-size:11px;opacity:.6;" id="ap-datedisp"></div>
-      </div>
-      <div class="fgrid">
-        <div class="fsec">1. Patient Details</div>
-        <div class="fg"><label>Name *</label><input type="text" id="ap-name" placeholder="Full name"/></div>
-        <div class="fg"><label>Age *</label><input type="number" id="ap-age" placeholder="Age" min="0" max="120"/></div>
-        <div class="fg"><label>Gender</label><select id="ap-gender"><option>Male</option><option>Female</option><option>Other</option></select></div>
-        <div class="fg"><label>Phone *</label><input type="tel" id="ap-phone" placeholder="Mobile number"/></div>
-        <div class="fg full"><label>Address</label><input type="text" id="ap-addr" placeholder="Full address"/></div>
-        <div class="fg"><label>Occupation</label><input type="text" id="ap-occ" placeholder="Occupation"/></div>
-        <div class="fg"><label>Assessment Date</label><input type="date" id="ap-date"/></div>
-
-        <div class="fsec">2. Vitals</div>
-        <div class="fg"><label>BP (Blood Pressure)</label><input type="text" id="ap-bp" placeholder="e.g. 120/80"/></div>
-        <div class="fg"><label>DM (Diabetes)</label><select id="ap-dm"><option>No</option><option>Type 1</option><option>Type 2</option><option>Pre-diabetic</option></select></div>
-        <div class="fg"><label>Thyroid</label><select id="ap-thy"><option>Normal</option><option>Hypothyroid</option><option>Hyperthyroid</option></select></div>
-        <div class="fg"><label>Implants</label><select id="ap-imp"><option>None</option><option>Metal Implant</option><option>Pacemaker</option><option>Other</option></select></div>
-
-        <div class="fsec">3. Chief Complaints</div>
-        <div class="fg full"><textarea id="ap-cc" placeholder="Describe the main complaints…" style="min-height:80px;"></textarea></div>
-
-        <div class="fsec">4. Past History</div>
-        <div class="fg full"><textarea id="ap-pastH" placeholder="Previous injuries, surgeries, medical history…" style="min-height:70px;"></textarea></div>
-
-        <div class="fsec">5. Pain History</div>
-        <div class="fg"><label>Site (Pain Location)</label><input type="text" id="ap-psite" placeholder="e.g. Lower back, Knee"/></div>
-        <div class="fg"><label>Side</label><select id="ap-pside"><option value="">—</option><option>Left</option><option>Right</option><option>Bilateral</option><option>Central</option></select></div>
-        <div class="fg"><label>Duration</label><input type="text" id="ap-pdur" placeholder="e.g. 2 weeks, 3 months"/></div>
-        <div class="fg"><label>Nature</label><select id="ap-pnat"><option value="">—</option><option>Continuous</option><option>Intermittent</option></select></div>
-        <div class="fg full"><label>Aggravating Factors</label><input type="text" id="ap-aggr" placeholder="What makes it worse?"/></div>
-        <div class="fg full"><label>Relieving Factors</label><input type="text" id="ap-relv" placeholder="What makes it better?"/></div>
-
-        <div class="fsec">6. Muscle Involved</div>
-        <div class="fg"><label>Muscle Weak</label><input type="text" id="ap-mweak" placeholder="Muscles showing weakness"/></div>
-        <div class="fg"><label>Muscle Tight</label><input type="text" id="ap-mtight" placeholder="Muscles showing tightness"/></div>
-
-        <div class="fsec">7. Pain Scale (0–10)</div>
-        <div id="ap-painscale-wrap" style="grid-column:1/-1;">
-          <div class="painscale" id="ap-painscale"></div>
-          <div id="ap-painlabel" style="text-align:center;font-size:12px;color:var(--g500);margin-top:6px;">Tap to select pain level</div>
-          <input type="hidden" id="ap-painval" value=""/>
-        </div>
-
-        <div class="fsec">8. Body Chart</div>
-        <div class="bodychart-wrap">
-          <div class="bodychart-side"><span>Front View</span><canvas id="bc-front" width="160" height="260"></canvas></div>
-          <div class="bodychart-side"><span>Back View</span><canvas id="bc-back" width="160" height="260"></canvas></div>
-        </div>
-        <div class="bc-btns">
-          <button type="button" class="btn bout bsm" onclick="clearBodyChart()">🗑 Clear Markings</button>
-          <span style="font-size:12px;color:var(--g500);align-self:center;">Click/tap on the body diagram to mark pain areas (red dots)</span>
-        </div>
-        <div class="fg full"><label>Body Chart Notes</label><input type="text" id="ap-bcnotes" placeholder="Describe marked areas if needed…"/></div>
-
-        <div class="fsec">9. Restricted Activities</div>
-        <div class="fg full"><textarea id="ap-restr" placeholder="Activities the patient cannot perform…" style="min-height:80px;"></textarea></div>
-
-        <div class="fsec">10. Investigation Notes</div>
-        <div class="fg full"><textarea id="ap-inv" placeholder="X-Ray findings, MRI reports, lab results (text only)…" style="min-height:70px;"></textarea></div>
-
-        <div class="fsec">11. Diagnosis</div>
-        <div class="fg full"><textarea id="ap-diag" placeholder="Clinical diagnosis…" style="min-height:70px;"></textarea></div>
-
-        <div class="fsec">12. Treatment Plan</div>
-        <div class="fg full"><label>a) Lengthening Exercises</label><textarea id="ap-le" placeholder="Stretching / lengthening exercises prescribed…" style="min-height:70px;"></textarea></div>
-        <div class="fg full"><label>b) Strengthening Exercises</label><textarea id="ap-se" placeholder="Strengthening exercises prescribed…" style="min-height:70px;"></textarea></div>
-        <div class="fg full"><label>c) Modalities / Other Treatment</label><textarea id="ap-mod" placeholder="e.g. TENS, Ultrasound, Hot pack, IFT…" style="min-height:70px;"></textarea></div>
-
-        <div class="fsec">13. Follow-up &amp; Notes</div>
-        <div class="fg"><label>Follow-up Date</label><input type="date" id="ap-followup"/></div>
-        <div class="fg full"><label>Assessment Notes</label><textarea id="ap-notes" placeholder="Additional notes for this session…" style="min-height:70px;"></textarea></div>
-
-        <div class="fg full" style="background:var(--g50);border-radius:8px;padding:11px 13px;">
-          <span style="font-size:13px;color:var(--g600);">🩺 <strong>Therapist:</strong> Dr. S. Ramesh PT &nbsp;|&nbsp; <strong>Date:</strong> <span id="ap-therapist-date"></span></span>
-        </div>
-      </div>
-      <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:16px;padding-top:16px;border-top:1px solid var(--g100);">
-        <button class="btn bout" onclick="resetAddPatForm()">🗑 Clear Form</button>
-        <button class="btn bp" onclick="saveAddPat()">💾 Save Assessment &amp; Create Patient</button>
-      </div>
-    </div>
+<!-- ASSESSMENTS -->
+<div class="pg" id="pg-assessments">
+  <div class="phd"><h2>Assessments</h2><button class="btn bp no-print" onclick="openAssess()">+ New Assessment</button></div>
+  <div class="srow">
+    <div class="sbox"><span style="color:var(--g400)">🔍</span><input type="text" id="asearch" placeholder="Search by patient name…" oninput="renderAssess()"/></div>
+    <button class="btn bout bsm no-print" onclick="loadAssess()">↺ Refresh</button>
   </div>
+  <div class="twrap"><table><thead><tr><th>ID</th><th>Patient</th><th>Phone</th><th>Age/Gender</th><th>Date</th><th>Chief Complaint</th><th>Diagnosis</th><th>Actions</th></tr></thead><tbody id="atbody"></tbody></table></div>
 </div>
 
 <!-- APPOINTMENTS -->
 <div class="pg" id="pg-appointments">
-  <div class="phd"><h2>Appointments</h2><button class="btn bp" onclick="openAppt()">+ New Appointment</button></div>
+  <div class="phd"><h2>Appointments</h2><button class="btn bp no-print" onclick="openAppt()">+ New Appointment</button></div>
   <div class="srow">
-    <div class="sbox"><span style="color:var(--g400)">🔍</span><input type="text" id="apsearch" placeholder="Search by patient name or phone…" oninput="renderAppts()"/></div>
-    <button class="btn bout bsm" onclick="loadAppts()">↺ Refresh</button>
+    <div class="sbox"><span style="color:var(--g400)">🔍</span><input type="text" id="apsearch" placeholder="Search by patient name…" oninput="renderAppts()"/></div>
+    <button class="btn bout bsm no-print" onclick="loadAppts()">↺ Refresh</button>
   </div>
-  <div class="twrap"><table><thead><tr><th>ID</th><th>Patient Name</th><th>Phone</th><th>Condition</th><th>Date</th><th>Time</th><th>Status</th><th>Actions</th></tr></thead><tbody id="aptbody"></tbody></table></div>
+  <div class="twrap"><table><thead><tr><th>ID</th><th>Patient</th><th>Phone</th><th>Condition</th><th>Date</th><th>Time</th><th>Status</th><th>Actions</th></tr></thead><tbody id="aptbody"></tbody></table></div>
 </div>
 
 <!-- PAYMENTS -->
 <div class="pg" id="pg-payments">
-  <div class="phd"><h2>Payments</h2><button class="btn bp" onclick="openPay()">+ Add Payment</button></div>
+  <div class="phd"><h2>Payments</h2><button class="btn bp no-print" onclick="openPay()">+ Add Payment</button></div>
   <div class="srow">
     <div class="sbox"><span style="color:var(--g400)">🔍</span><input type="text" id="pmsearch" placeholder="Search by patient name…" oninput="renderPay()"/></div>
-    <button class="btn bout bsm" onclick="loadPay()">↺ Refresh</button>
+    <button class="btn bout bsm no-print" onclick="loadPay()">↺ Refresh</button>
   </div>
-  <div class="twrap"><table><thead><tr><th>ID</th><th>Patient Name</th><th>Phone</th><th>Amount (₹)</th><th>Method</th><th>Date</th><th>Notes</th><th>Actions</th></tr></thead><tbody id="pmtbody"></tbody></table></div>
+  <div class="twrap"><table><thead><tr><th>ID</th><th>Patient</th><th>Phone</th><th>Date</th><th>Treatment Amt</th><th>Paid Amt</th><th>Mode</th><th>Notes</th><th>Actions</th></tr></thead><tbody id="pmtbody"></tbody></table></div>
 </div>
 
 <!-- REVENUE -->
 <div class="pg" id="pg-revenue">
-  <div class="phd"><h2>Revenue</h2><button class="btn bout bsm" onclick="renderRev()">↺ Refresh</button></div>
-  <div class="ftabs">
+  <div class="phd"><h2>Revenue</h2><button class="btn bout bsm no-print" onclick="renderRev()">↺ Refresh</button></div>
+  <div class="ftabs no-print">
     <div class="ftab active" data-rf="today" onclick="setRF(this)">Today</div>
     <div class="ftab" data-rf="week" onclick="setRF(this)">This Week</div>
     <div class="ftab" data-rf="month" onclick="setRF(this)">This Month</div>
@@ -436,12 +349,12 @@ tr:hover td{background:#fafcff;}
     <div class="sc sc-o"><div class="sico ico-o">📊</div><div><div class="sval" id="rv-avg">—</div><div class="slbl">Avg per Patient</div></div></div>
   </div>
   <div class="panel" style="margin-bottom:16px;"><div class="phd2"><h3>Revenue by Day (Last 7 Days)</h3></div><div class="pbd"><div class="barchart" id="rv-chart"></div></div></div>
-  <div class="panel"><div class="phd2"><h3>Payment History</h3></div><div class="pbd" style="padding:0;"><table><thead><tr><th>Patient</th><th>Date</th><th>Amount</th><th>Method</th><th>Notes</th></tr></thead><tbody id="rvtbody"></tbody></table></div></div>
+  <div class="panel"><div class="phd2"><h3>Payment Records</h3></div><div class="pbd" style="padding:0;"><table><thead><tr><th>Patient</th><th>Date</th><th>Paid Amt</th><th>Mode</th><th>Notes</th></tr></thead><tbody id="rvtbody"></tbody></table></div></div>
 </div>
 
 <!-- STAFF -->
 <div class="pg" id="pg-staff">
-  <div class="phd"><h2>Staff</h2><button class="btn bp" onclick="openStaff()">+ Add Staff</button></div>
+  <div class="phd"><h2>Staff</h2><button class="btn bp no-print" onclick="openStaff()">+ Add Staff</button></div>
   <div class="twrap"><table><thead><tr><th>ID</th><th>Name</th><th>Phone</th><th>Role</th><th>Username</th><th>Status</th><th>Actions</th></tr></thead><tbody id="stbody"></tbody></table></div>
 </div>
 
@@ -450,12 +363,12 @@ tr:hover td{background:#fafcff;}
   <div class="phd"><h2>Google Sheets Setup</h2></div>
   <div class="setupcard">
     <h3>Connect Your Google Sheets Backend</h3>
-    <p>Paste your Google Apps Script Web App URL below. All data will flow through your own Google Sheets spreadsheet.</p>
+    <p>Paste your Google Apps Script Web App URL. All data flows through your own Google Spreadsheet.</p>
     <div class="steps">
-      <div class="step"><div class="stepnum">1</div><div class="stepb"><strong>Create Google Spreadsheet</strong><p>Go to sheets.google.com → New spreadsheet → Name it "Urban Physio Center"</p></div></div>
-      <div class="step"><div class="stepnum">2</div><div class="stepb"><strong>Open Apps Script</strong><p>Extensions → Apps Script → Paste the code from the section below → Save (Ctrl+S)</p></div></div>
-      <div class="step"><div class="stepnum">3</div><div class="stepb"><strong>Deploy as Web App</strong><p>Deploy → New deployment → Type: Web App → Execute as: Me → Who has access: Anyone → Deploy → Copy URL</p></div></div>
-      <div class="step"><div class="stepnum">4</div><div class="stepb"><strong>Paste URL &amp; Save</strong><p>Paste the URL below and click Save. The portal will connect immediately.</p></div></div>
+      <div class="step"><div class="stepnum">1</div><div class="stepb"><strong>Create Google Spreadsheet</strong><p>sheets.google.com → New → Name it "Urban Physio Center DB"</p></div></div>
+      <div class="step"><div class="stepnum">2</div><div class="stepb"><strong>Open Apps Script</strong><p>Extensions → Apps Script → Paste the backend code below → Save</p></div></div>
+      <div class="step"><div class="stepnum">3</div><div class="stepb"><strong>Deploy as Web App</strong><p>Deploy → New deployment → Web App → Execute as: Me → Access: Anyone → Deploy → Copy URL</p></div></div>
+      <div class="step"><div class="stepnum">4</div><div class="stepb"><strong>Paste URL &amp; Save</strong><p>Paste URL below → Save → Test Connection</p></div></div>
     </div>
     <div class="fg"><label>Google Apps Script Web App URL</label><input type="url" id="gasurl" placeholder="https://script.google.com/macros/s/…/exec" style="font-size:12px;"/></div>
     <div class="urlstat"><div class="udot dgray" id="udot"></div><span id="ustat" style="font-size:12px;color:var(--g500);">Not configured</span></div>
@@ -464,46 +377,61 @@ tr:hover td{background:#fafcff;}
       <button class="btn bout" onclick="testGAS()">🔌 Test Connection</button>
     </div>
     <div style="margin-top:26px;border-top:1px solid var(--g100);padding-top:20px;">
-      <h3 style="margin-bottom:10px;">📄 Google Apps Script Code</h3>
-      <p style="font-size:12px;color:var(--g500);margin-bottom:10px;">Copy and paste this entire code into your Apps Script editor:</p>
+      <h3 style="margin-bottom:10px;">📄 Google Apps Script Backend Code</h3>
+      <p style="font-size:12px;color:var(--g500);margin-bottom:10px;">Copy and paste into your Apps Script editor. Replace YOUR_SPREADSHEET_ID.</p>
       <div class="codeblock"><pre id="gascode"></pre></div>
       <button class="btn bout bsm" style="margin-top:9px;" onclick="copyCode()">📋 Copy Code</button>
     </div>
   </div>
 </div>
 
-  </div><!-- /acon -->
+  </div>
 </main>
 </div>
 </div>
 
-<!-- MODALS -->
+<!-- ═══ MODALS ═══ -->
 
-<!-- Assessment View -->
-<div class="ov" id="ov-aview">
-<div class="mdl" style="max-width:750px;">
-  <div class="mhd"><h2>Assessment Details</h2><button class="mclose" onclick="closeOv('ov-aview')">×</button></div>
-  <div class="mbd" id="aviewbd"></div>
-  <div class="mft" id="aviewft"></div>
-</div>
-</div>
-
-<!-- Edit Patient Modal -->
-<div class="ov" id="ov-editpat">
-<div class="mdl" style="max-width:500px;">
-  <div class="mhd"><h2>Edit Patient</h2><button class="mclose" onclick="closeOv('ov-editpat')">×</button></div>
+<!-- Assessment Modal -->
+<div class="ov" id="ov-assess">
+<div class="mdl">
+  <div class="mhd"><h2 id="assess-modal-title">New Physiotherapy Assessment</h2><button class="mclose" onclick="closeOv('ov-assess')">×</button></div>
   <div class="mbd">
-    <input type="hidden" id="ep-id"/>
+    <input type="hidden" id="af-edit-id"/>
     <div class="fgrid">
-      <div class="fg"><label>Name *</label><input type="text" id="ep-name"/></div>
-      <div class="fg"><label>Age</label><input type="number" id="ep-age"/></div>
-      <div class="fg"><label>Gender</label><select id="ep-gender"><option>Male</option><option>Female</option><option>Other</option></select></div>
-      <div class="fg"><label>Phone</label><input type="tel" id="ep-phone"/></div>
-      <div class="fg full"><label>Address</label><input type="text" id="ep-addr"/></div>
-      <div class="fg full"><label>Occupation</label><input type="text" id="ep-occ"/></div>
+      <div class="fsec">Patient Information</div>
+      <div class="fg"><label>Patient Name *</label><input type="text" id="af-name" placeholder="Type full name"/></div>
+      <div class="fg"><label>Phone *</label><input type="tel" id="af-phone" placeholder="Phone number"/></div>
+      <div class="fg"><label>Age</label><input type="number" id="af-age" placeholder="Age" min="0" max="120"/></div>
+      <div class="fg"><label>Gender</label><select id="af-gender"><option>Male</option><option>Female</option><option>Other</option></select></div>
+      <div class="fg"><label>Occupation</label><input type="text" id="af-occ" placeholder="Occupation"/></div>
+      <div class="fg"><label>Date</label><input type="date" id="af-date"/></div>
+      <div class="fsec">Vitals</div>
+      <div class="fg"><label>Blood Pressure</label><input type="text" id="af-bp" placeholder="e.g. 120/80"/></div>
+      <div class="fg"><label>Diabetes</label><select id="af-dm"><option>No</option><option>Type 1</option><option>Type 2</option><option>Pre-diabetic</option></select></div>
+      <div class="fg"><label>Thyroid</label><select id="af-thy"><option>Normal</option><option>Hypothyroid</option><option>Hyperthyroid</option></select></div>
+      <div class="fg"><label>Implants</label><select id="af-imp"><option>None</option><option>Metal Implant</option><option>Pacemaker</option><option>Other</option></select></div>
+      <div class="fsec">Clinical Information</div>
+      <div class="fg full"><label>Chief Complaint</label><textarea id="af-cc" placeholder="Main complaint…"></textarea></div>
+      <div class="fg full"><label>Past History</label><textarea id="af-ph" placeholder="Previous injuries, surgeries…"></textarea></div>
+      <div class="fg full"><label>Pain History</label><textarea id="af-pain" placeholder="When and how pain started…"></textarea></div>
+      <div class="fsec">Physical Examination</div>
+      <div class="fg full"><label>Physical Examination</label><textarea id="af-pe" placeholder="Examination findings…"></textarea></div>
+      <div class="fg full"><label>Posture Analysis</label><textarea id="af-posture" placeholder="Postural deviations…"></textarea></div>
+      <div class="fg full"><label>Range of Motion</label><textarea id="af-rom" placeholder="ROM measurements…"></textarea></div>
+      <div class="fg full"><label>Muscle Strength</label><textarea id="af-ms" placeholder="Grading and findings…"></textarea></div>
+      <div class="fg full"><label>Functional Limitations</label><textarea id="af-fl" placeholder="Limitations noted…"></textarea></div>
+      <div class="fg full"><label>Restricted Activities</label><textarea id="af-ra" placeholder="Activities patient cannot perform…"></textarea></div>
+      <div class="fsec">Diagnosis &amp; Treatment Plan</div>
+      <div class="fg full"><label>Diagnosis</label><textarea id="af-diag" placeholder="Clinical diagnosis…"></textarea></div>
+      <div class="fg full"><label>Lengthening Exercises</label><textarea id="af-le" placeholder="Stretching exercises…"></textarea></div>
+      <div class="fg full"><label>Strengthening Exercises</label><textarea id="af-se" placeholder="Strengthening exercises…"></textarea></div>
+      <div class="fg full"><label>Home Exercise Program</label><textarea id="af-hep" placeholder="Home exercise instructions…"></textarea></div>
+      <div class="fg"><label>Follow-Up Date</label><input type="date" id="af-followup"/></div>
+      <div class="fg full"><label>Session Notes</label><textarea id="af-sn" placeholder="Additional notes…"></textarea></div>
     </div>
   </div>
-  <div class="mft"><button class="btn bout" onclick="closeOv('ov-editpat')">Cancel</button><button class="btn bp" onclick="saveEditPat()">💾 Save Changes</button></div>
+  <div class="mft"><button class="btn bout" onclick="closeOv('ov-assess')">Cancel</button><button class="btn bp" onclick="saveAssess()">💾 Save Assessment</button></div>
 </div>
 </div>
 
@@ -512,27 +440,21 @@ tr:hover td{background:#fafcff;}
 <div class="mdl" style="max-width:540px;">
   <div class="mhd"><h2 id="appt-modal-title">New Appointment</h2><button class="mclose" onclick="closeOv('ov-appt')">×</button></div>
   <div class="mbd">
-    <input type="hidden" id="apmod-id"/>
+    <input type="hidden" id="ap-edit-id"/>
     <div class="fgrid">
-      <div class="fg"><label>Patient Name *</label><input type="text" id="ap2-name" placeholder="Full name"/></div>
-      <div class="fg"><label>Mobile Number *</label><input type="tel" id="ap2-phone" placeholder="Phone number"/></div>
-      <div class="fg full"><label>Condition</label><input type="text" id="ap2-cond" placeholder="e.g. Back Pain, Knee Pain"/></div>
-      <div class="fg"><label>Appointment Date *</label><input type="date" id="ap2-date"/></div>
-      <div class="fg"><label>Appointment Time *</label><input type="time" id="ap2-time"/></div>
-      <div class="fg full"><label>Notes</label><textarea id="ap2-notes" placeholder="Additional notes…"></textarea></div>
+      <div class="fg"><label>Patient Name *</label><input type="text" id="ap-name" placeholder="Full name"/></div>
+      <div class="fg"><label>Phone *</label><input type="tel" id="ap-phone" placeholder="Phone number"/></div>
+      <div class="fg"><label>Age</label><input type="number" id="ap-age" placeholder="Age"/></div>
+      <div class="fg"><label>Gender</label><select id="ap-gender"><option>Male</option><option>Female</option><option>Other</option></select></div>
+      <div class="fg"><label>Date *</label><input type="date" id="ap-date"/></div>
+      <div class="fg"><label>Time *</label><input type="time" id="ap-time"/></div>
+      <div class="fg full"><label>Condition</label><input type="text" id="ap-cond" placeholder="e.g. Back Pain, Knee Pain"/></div>
+      <div class="fg full"><label>Status</label><select id="ap-status"><option>Scheduled</option><option>Confirmed</option><option>Completed</option><option>Cancelled</option></select></div>
+      <div class="fg full"><label>Notes</label><textarea id="ap-notes" placeholder="Additional notes…"></textarea></div>
     </div>
-    <div style="background:var(--g50);border-radius:7px;padding:10px 13px;font-size:13px;color:var(--g600);margin-top:4px;">🩺 <strong>Physiotherapist:</strong> Dr. S. Ramesh PT</div>
+    <div style="background:var(--g50);border-radius:7px;padding:10px 13px;font-size:13px;color:var(--g600);margin-top:4px;">🩺 <strong>Therapist:</strong> Dr. S. Ramesh PT</div>
   </div>
   <div class="mft"><button class="btn bout" onclick="closeOv('ov-appt')">Cancel</button><button class="btn bp" onclick="saveAppt()">💾 Save Appointment</button></div>
-</div>
-</div>
-
-<!-- Appointment View Modal -->
-<div class="ov" id="ov-apptview">
-<div class="mdl" style="max-width:500px;">
-  <div class="mhd"><h2>Appointment Details</h2><button class="mclose" onclick="closeOv('ov-apptview')">×</button></div>
-  <div class="mbd" id="apptviewbd"></div>
-  <div class="mft"><button class="btn bout" onclick="closeOv('ov-apptview')">Close</button></div>
 </div>
 </div>
 
@@ -541,14 +463,15 @@ tr:hover td{background:#fafcff;}
 <div class="mdl" style="max-width:500px;">
   <div class="mhd"><h2 id="pay-modal-title">Add Payment</h2><button class="mclose" onclick="closeOv('ov-pay')">×</button></div>
   <div class="mbd">
-    <input type="hidden" id="pmmod-id"/>
+    <input type="hidden" id="pm-edit-id"/>
     <div class="fgrid">
       <div class="fg"><label>Patient Name *</label><input type="text" id="pm-name" placeholder="Full name"/></div>
-      <div class="fg"><label>Mobile Number</label><input type="tel" id="pm-phone" placeholder="Phone number"/></div>
-      <div class="fg"><label>Amount (₹) *</label><input type="number" id="pm-amt" placeholder="0" min="0"/></div>
-      <div class="fg"><label>Payment Method</label><select id="pm-method"><option>Cash</option><option>UPI</option><option>Card</option><option>Bank Transfer</option></select></div>
-      <div class="fg"><label>Payment Date *</label><input type="date" id="pm-date"/></div>
-      <div class="fg full"><label>Notes</label><input type="text" id="pm-notes" placeholder="Optional notes…"/></div>
+      <div class="fg"><label>Phone</label><input type="tel" id="pm-phone" placeholder="Phone number"/></div>
+      <div class="fg"><label>Date *</label><input type="date" id="pm-date"/></div>
+      <div class="fg"><label>Treatment Amount (₹)</label><input type="number" id="pm-treat" placeholder="0" min="0" step="0.01"/></div>
+      <div class="fg"><label>Paid Amount (₹) *</label><input type="number" id="pm-paid" placeholder="0" min="0" step="0.01"/></div>
+      <div class="fg"><label>Payment Mode</label><select id="pm-mode"><option>Cash</option><option>UPI</option><option>Card</option><option>Bank Transfer</option></select></div>
+      <div class="fg full"><label>Notes / Remarks</label><input type="text" id="pm-rem" placeholder="Optional remarks…"/></div>
     </div>
   </div>
   <div class="mft"><button class="btn bout" onclick="closeOv('ov-pay')">Cancel</button><button class="btn bp" onclick="savePay()">💾 Save Payment</button></div>
@@ -573,106 +496,193 @@ tr:hover td{background:#fafcff;}
 </div>
 </div>
 
+<!-- View Modal (generic) -->
+<div class="ov" id="ov-view">
+<div class="mdl" style="max-width:720px;">
+  <div class="mhd"><h2 id="view-title">Details</h2><button class="mclose" onclick="closeOv('ov-view')">×</button></div>
+  <div class="mbd" id="view-bd"></div>
+  <div class="mft" id="view-ft"></div>
+</div>
+</div>
+
 <script>
-// STATE
+// ═══════════════════════════════════════════
+//  STATE
+// ═══════════════════════════════════════════
 let GAS = localStorage.getItem('upc_gas') || '';
 let CU = null;
-let RF = 'today', RCF='', RCT='';
+let RF = 'today', RCF = '', RCT = '';
+// Single source of truth — always from Sheets
 let DB = { patients:[], assessments:[], appointments:[], payments:[], staff:[] };
-let EDITING_APPT = null;
-let EDITING_PAY = null;
-// Body chart marks: {front:[], back:[]}
-let bodyMarks = {front:[], back:[]};
 
 const CREDS = [
-  {u:'admin',p:'admin123',role:'Admin',disp:'Admin User'},
-  {u:'staff',p:'staff123',role:'Receptionist',disp:'Staff User'},
+  {u:'admin',  p:'admin123', role:'Admin',        disp:'Admin User'},
+  {u:'staff',  p:'staff123', role:'Receptionist', disp:'Staff User'},
 ];
+const CLINIC = 'Urban Physio Center';
+const DOCTOR = 'Dr. S. Ramesh PT';
 
-// AUTH
+// ═══════════════════════════════════════════
+//  AUTH
+// ═══════════════════════════════════════════
 function doLogin(){
-  const u=document.getElementById('lu').value.trim();
-  const p=document.getElementById('lp').value;
-  const m=CREDS.find(c=>c.u===u&&c.p===p);
-  if(!m){document.getElementById('lerr').style.display='block';return;}
+  const u = document.getElementById('lu').value.trim();
+  const p = document.getElementById('lp').value;
+  const m = CREDS.find(c => c.u === u && c.p === p);
+  if(!m){ document.getElementById('lerr').style.display='block'; return; }
   document.getElementById('lerr').style.display='none';
-  CU=m;
-  document.getElementById('uname').textContent=m.disp;
-  document.getElementById('urole').textContent=m.role;
-  document.getElementById('uav').textContent=m.disp[0];
-  document.getElementById('ls').style.display='none';
-  document.getElementById('app').style.display='block';
+  CU = m;
+  document.getElementById('uname').textContent = m.disp;
+  document.getElementById('urole').textContent = m.role;
+  document.getElementById('uav').textContent = m.disp[0];
+  document.getElementById('ls').style.display = 'none';
+  document.getElementById('app').style.display = 'block';
   startClock();
   initSetup();
-  initAddPatForm();
-  initBodyChart();
-  loadAll();
+  if(GAS) refreshAll();
+  else { renderDashEmpty(); renderPat(); renderAssess(); renderAppts(); renderPay(); renderStaff(); }
 }
-document.getElementById('lp').onkeydown=e=>{if(e.key==='Enter')doLogin();};
-document.getElementById('lu').onkeydown=e=>{if(e.key==='Enter')document.getElementById('lp').focus();};
+document.getElementById('lp').onkeydown = e => { if(e.key==='Enter') doLogin(); };
+document.getElementById('lu').onkeydown = e => { if(e.key==='Enter') document.getElementById('lp').focus(); };
 
 function logout(){
-  CU=null;
-  document.getElementById('app').style.display='none';
-  document.getElementById('ls').style.display='flex';
-  document.getElementById('lu').value='';
-  document.getElementById('lp').value='';
+  CU = null;
+  document.getElementById('app').style.display = 'none';
+  document.getElementById('ls').style.display = 'flex';
+  document.getElementById('lu').value = '';
+  document.getElementById('lp').value = '';
 }
 
-// CLOCK
+// ═══════════════════════════════════════════
+//  CLOCK
+// ═══════════════════════════════════════════
 function startClock(){
-  const tick=()=>{
-    const now=new Date();
-    document.getElementById('hclock').textContent=
-      now.toLocaleDateString('en-IN',{weekday:'short',day:'numeric',month:'short',year:'numeric'})+
-      '  '+now.toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit'});
+  const tick = () => {
+    const n = new Date();
+    document.getElementById('hclock').textContent =
+      n.toLocaleDateString('en-IN',{weekday:'short',day:'numeric',month:'short',year:'numeric'}) +
+      '  ' + n.toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit'});
   };
-  tick();setInterval(tick,1000);
+  tick(); setInterval(tick, 1000);
 }
 
-// NAV
-const TITLES={dashboard:'Dashboard',patients:'Patients',addpatient:'Add Patient',appointments:'Appointments',payments:'Payments',revenue:'Revenue',staff:'Staff',setup:'Google Sheets Setup'};
+// ═══════════════════════════════════════════
+//  DATE UTILS — no invalid dates ever
+// ═══════════════════════════════════════════
+function fmtDate(v){
+  if(!v || v==='' || v==='0' || v==='undefined' || v==='null') return '—';
+  // Reject 1899/1900/0000 epoch artifacts from Sheets serial numbers
+  const s = String(v).trim();
+  if(s==='0' || s==='Invalid Date') return '—';
+  let d;
+  // Try ISO yyyy-mm-dd first
+  if(/^\d{4}-\d{2}-\d{2}/.test(s)){
+    d = new Date(s + (s.length===10?'T00:00:00':''));
+  } else if(/^\d{1,2}\/\d{1,2}\/\d{4}/.test(s)){
+    const [day,mon,yr] = s.split('/');
+    d = new Date(yr+'-'+mon.padStart(2,'0')+'-'+day.padStart(2,'0')+'T00:00:00');
+  } else {
+    d = new Date(s);
+  }
+  if(!d || isNaN(d.getTime())) return '—';
+  const yr = d.getFullYear();
+  if(yr < 1950 || yr > 2100) return '—';
+  return d.toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'});
+}
+function fmtDateTime(dateV, timeV){
+  const d = fmtDate(dateV);
+  if(d==='—') return '—';
+  const t = fmtTime(timeV);
+  return t && t!=='—' ? d + ', ' + t : d;
+}
+function fmtTime(v){
+  if(!v || v==='' || v==='0' || v==='undefined') return '—';
+  const s = String(v).trim();
+  // HH:MM format
+  if(/^\d{1,2}:\d{2}/.test(s)){
+    const [h,m] = s.split(':');
+    const hr = parseInt(h);
+    const ampm = hr>=12?'PM':'AM';
+    const hr12 = hr===0?12:hr>12?hr-12:hr;
+    return `${hr12}:${m} ${ampm}`;
+  }
+  return s;
+}
+function toISO(v){
+  // Convert various date formats to yyyy-mm-dd for input[type=date]
+  if(!v || v==='' || v==='—') return '';
+  const s = String(v).trim();
+  if(/^\d{4}-\d{2}-\d{2}/.test(s)) return s.substring(0,10);
+  if(/^\d{1,2}\/\d{1,2}\/\d{4}/.test(s)){
+    const [d2,m2,y2]=s.split('/');
+    return `${y2}-${m2.padStart(2,'0')}-${d2.padStart(2,'0')}`;
+  }
+  const d=new Date(s);
+  if(!isNaN(d.getTime())) return d.toISOString().split('T')[0];
+  return '';
+}
+function td(){ return new Date().toISOString().split('T')[0]; }
+function nda(n){ const d=new Date(); d.setDate(d.getDate()-n); return d.toISOString().split('T')[0]; }
+function fmt(n){
+  const num = parseFloat(n);
+  if(isNaN(num)) return '0';
+  return num.toLocaleString('en-IN');
+}
+function safeNum(v){ const n=parseFloat(v); return isNaN(n)?0:n; }
+
+// ═══════════════════════════════════════════
+//  NAVIGATION
+// ═══════════════════════════════════════════
+const TITLES = {dashboard:'Dashboard',patients:'Patients',assessments:'Assessments',appointments:'Appointments',payments:'Payments',revenue:'Revenue',staff:'Staff',setup:'Google Sheets Setup'};
 function nav(el){
-  if(!el)return;
-  const pg=el.dataset.pg;
+  if(!el) return;
+  const pg = el.dataset.pg;
   document.querySelectorAll('.ni').forEach(n=>n.classList.remove('active'));
   el.classList.add('active');
   document.querySelectorAll('.pg').forEach(p=>p.classList.remove('active'));
   document.getElementById('pg-'+pg).classList.add('active');
-  document.getElementById('htitle').textContent=TITLES[pg]||pg;
+  document.getElementById('htitle').textContent = TITLES[pg]||pg;
   document.getElementById('sb').classList.remove('open');
-  if(pg==='revenue')renderRev();
-  if(pg==='addpatient'){
-    const now=new Date();
-    document.getElementById('ap-therapist-date').textContent=fmtDate(now.toISOString().split('T')[0]);
-    document.getElementById('ap-datedisp').textContent=fmtDate(now.toISOString().split('T')[0]);
-  }
+  if(pg==='revenue') renderRev();
 }
-function toggleSB(){document.getElementById('sb').classList.toggle('open');}
+function toggleSB(){ document.getElementById('sb').classList.toggle('open'); }
 
-// GAS API
+// ═══════════════════════════════════════════
+//  GAS API — no localStorage, no mock data
+// ═══════════════════════════════════════════
 async function gasGet(action){
-  if(!GAS)return{ok:false,error:'No GAS URL. Configure in Google Sheets Setup.'};
-  try{
-    const url=new URL(GAS);
-    url.searchParams.set('action',action);
-    const r=await fetch(url.toString());
-    return await r.json();
-  }catch(e){return{ok:false,error:e.message};}
+  if(!GAS) return {ok:false, error:'No GAS URL configured. Go to Google Sheets Setup.'};
+  try {
+    const url = new URL(GAS);
+    url.searchParams.set('action', action);
+    const r = await fetch(url.toString(), {cache:'no-cache'});
+    const text = await r.text();
+    try { return JSON.parse(text); }
+    catch(e){ return {ok:false, error:'Invalid JSON from server: '+text.substring(0,80)}; }
+  } catch(e){ return {ok:false, error:e.message}; }
 }
-async function gasPost(action,body={}){
-  if(!GAS)return{ok:false,error:'No GAS URL. Configure in Google Sheets Setup.'};
-  try{
-    const url=new URL(GAS);
-    url.searchParams.set('action',action);
-    const r=await fetch(url.toString(),{method:'POST',body:JSON.stringify(body),headers:{'Content-Type':'text/plain'}});
-    return await r.json();
-  }catch(e){return{ok:false,error:e.message};}
+async function gasPost(action, body={}){
+  if(!GAS) return {ok:false, error:'No GAS URL configured. Go to Google Sheets Setup.'};
+  try {
+    const url = new URL(GAS);
+    url.searchParams.set('action', action);
+    const r = await fetch(url.toString(), {
+      method:'POST',
+      body: JSON.stringify(body),
+      headers:{'Content-Type':'text/plain'},
+      cache:'no-cache'
+    });
+    const text = await r.text();
+    try { return JSON.parse(text); }
+    catch(e){ return {ok:false, error:'Invalid JSON from server: '+text.substring(0,80)}; }
+  } catch(e){ return {ok:false, error:e.message}; }
 }
 
-// LOADER / TOAST
-function showL(msg='Loading…'){document.getElementById('lmsg').textContent=msg;document.getElementById('loader').classList.add('on');}
-function hideL(){document.getElementById('loader').classList.remove('on');}
+// ═══════════════════════════════════════════
+//  LOADER / TOAST / MODAL
+// ═══════════════════════════════════════════
+function showL(msg='Loading…'){ document.getElementById('lmsg').textContent=msg; document.getElementById('loader').classList.add('on'); }
+function hideL(){ document.getElementById('loader').classList.remove('on'); }
 function toast(msg,type=''){
   const tw=document.getElementById('tw');
   const t=document.createElement('div');
@@ -681,583 +691,659 @@ function toast(msg,type=''){
   tw.appendChild(t);
   setTimeout(()=>t.remove(),3800);
 }
-
-// MODAL
-function openOv(id){document.getElementById(id).classList.add('open');}
-function closeOv(id){document.getElementById(id).classList.remove('open');}
+function openOv(id){ document.getElementById(id).classList.add('open'); }
+function closeOv(id){ document.getElementById(id).classList.remove('open'); }
 document.querySelectorAll('.ov').forEach(o=>o.addEventListener('click',e=>{if(e.target===o)closeOv(o.id);}));
 
-// LOAD ALL
-function loadAll(){
-  loadDash();loadPat();loadAppts();loadPay();loadStaff();
-}
-
-// DATE UTILS
-function td(){return new Date().toISOString().split('T')[0];}
-function nda(n){const d=new Date();d.setDate(d.getDate()-n);return d.toISOString().split('T')[0];}
-function fmt(n){return Number(n).toLocaleString('en-IN');}
-function fmtDate(ds){
-  if(!ds)return'—';
-  try{
-    const d=new Date(ds+'T00:00:00');
-    return d.toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'});
-  }catch(e){return ds;}
-}
-function fmtDateTime(ds){
-  if(!ds)return'—';
-  try{
-    const d=new Date(ds+'T00:00:00');
-    return d.toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'});
-  }catch(e){return ds;}
-}
-
-// DASHBOARD
-async function loadDash(){
-  if(!GAS){renderDashEmpty();return;}
-  showL('Loading dashboard…');
-  const r=await gasGet('getDashboard');
+// ═══════════════════════════════════════════
+//  REFRESH ALL
+// ═══════════════════════════════════════════
+async function refreshAll(){
+  if(!GAS){ renderDashEmpty(); renderPat(); renderAssess(); renderAppts(); renderPay(); renderStaff(); return; }
+  showL('Syncing with Google Sheets…');
+  // Load all in parallel
+  const [rP, rA, rAp, rPay, rSt] = await Promise.all([
+    gasGet('getPatients'),
+    gasGet('getAssessments'),
+    gasGet('getAppointments'),
+    gasGet('getPayments'),
+    gasGet('getStaff')
+  ]);
+  if(rP.ok)   DB.patients     = Array.isArray(rP.data)   ? rP.data   : [];
+  if(rA.ok)   DB.assessments  = Array.isArray(rA.data)   ? rA.data   : [];
+  if(rAp.ok)  DB.appointments = Array.isArray(rAp.data)  ? rAp.data  : [];
+  if(rPay.ok) DB.payments     = Array.isArray(rPay.data) ? rPay.data : [];
+  if(rSt.ok)  DB.staff        = Array.isArray(rSt.data)  ? rSt.data  : [];
   hideL();
-  if(!r.ok){toast(r.error,'err');renderDashEmpty();return;}
-  const d=r.data;
-  document.getElementById('d-tp').textContent=d.totalPatients??0;
-  document.getElementById('d-ta').textContent=d.todayAppointments??0;
-  document.getElementById('d-tr').textContent='₹'+fmt(d.todayRevenue??0);
-  document.getElementById('d-mr').textContent='₹'+fmt(d.monthRevenue??0);
+  renderDash();
+  renderPat();
+  renderAssess();
+  renderAppts();
+  renderPay();
+  renderRev();
+  renderStaff();
+}
 
-  const conds=d.topConditions||[];
-  const maxC=Math.max(...conds.map(c=>c.count),1);
-  document.getElementById('d-conds').innerHTML=conds.length
-    ?conds.map(c=>`<div class="crow"><div class="cname">${c.condition}</div><div class="cbwrap"><div class="cbfill" style="width:${(c.count/maxC)*100}%"></div></div><div class="ccount">${c.count}</div></div>`).join('')
-    :'<div class="empty"><div class="ei">📋</div><p>No assessment data yet</p></div>';
+async function loadPat(){ if(!GAS){renderPat();return;} const r=await gasGet('getPatients'); if(r.ok)DB.patients=Array.isArray(r.data)?r.data:[]; renderPat(); updateDashCounts(); }
+async function loadAssess(){ if(!GAS){renderAssess();return;} const r=await gasGet('getAssessments'); if(r.ok)DB.assessments=Array.isArray(r.data)?r.data:[]; renderAssess(); updateDashConds(); }
+async function loadAppts(){ if(!GAS){renderAppts();return;} const r=await gasGet('getAppointments'); if(r.ok)DB.appointments=Array.isArray(r.data)?r.data:[]; renderAppts(); updateDashCounts(); }
+async function loadPay(){ if(!GAS){renderPay();return;} const r=await gasGet('getPayments'); if(r.ok)DB.payments=Array.isArray(r.data)?r.data:[]; renderPay(); renderRev(); updateDashRevenue(); }
+async function loadStaff(){ if(!GAS){renderStaff();return;} const r=await gasGet('getStaff'); if(r.ok)DB.staff=Array.isArray(r.data)?r.data:[]; renderStaff(); }
 
-  const wr=d.weeklyRevenue||[];
-  const maxW=Math.max(...wr.map(r=>r.amount),1);
-  document.getElementById('d-rvchart').innerHTML=wr.length
-    ?wr.map(r=>`<div class="bc-col"><div class="bcval">${r.amount?'₹'+(r.amount/1000).toFixed(1)+'k':''}</div><div class="bc-bar" style="height:${Math.max(3,(r.amount/maxW)*125)}px;"></div><div class="bclbl">${r.label}</div></div>`).join('')
-    :'<div class="empty" style="width:100%;font-size:12px;padding:18px 0;"><p>No payment data yet</p></div>';
-
-  const rp=d.recentPatients||[];
+// ═══════════════════════════════════════════
+//  DASHBOARD
+// ═══════════════════════════════════════════
+function renderDash(){
+  updateDashCounts();
+  updateDashRevenue();
+  updateDashConds();
+  updateDashCharts();
+  updateDashLists();
+}
+function updateDashCounts(){
+  const todayStr = td();
+  document.getElementById('d-tp').textContent = DB.patients.length || '0';
+  const todayAppts = DB.appointments.filter(a => toISO(a.date)===todayStr);
+  document.getElementById('d-ta').textContent = todayAppts.length || '0';
+}
+function updateDashRevenue(){
+  const todayStr = td();
+  const monthStart = todayStr.substring(0,7)+'-01';
+  const todayRev = DB.payments.filter(p=>toISO(p.date)===todayStr).reduce((s,p)=>s+safeNum(p.paidAmount),0);
+  const monthRev = DB.payments.filter(p=>{const d=toISO(p.date);return d>=monthStart&&d<=todayStr;}).reduce((s,p)=>s+safeNum(p.paidAmount),0);
+  document.getElementById('d-tr').textContent = '₹'+fmt(todayRev);
+  document.getElementById('d-mr').textContent = '₹'+fmt(monthRev);
+}
+function updateDashConds(){
+  // Top conditions from ASSESSMENTS chief complaint only
+  const condMap = {};
+  DB.assessments.forEach(a=>{
+    const c = (a.chiefComplaint||'').trim();
+    if(c){ condMap[c]=(condMap[c]||0)+1; }
+  });
+  const conds = Object.entries(condMap).sort((a,b)=>b[1]-a[1]).slice(0,8).map(([k,v])=>({condition:k,count:v}));
+  const maxC = Math.max(...conds.map(c=>c.count),1);
+  document.getElementById('d-conds').innerHTML = conds.length
+    ? conds.map(c=>`<div class="crow"><div class="cname" title="${c.condition}">${c.condition}</div><div class="cbwrap"><div class="cbfill" style="width:${(c.count/maxC)*100}%"></div></div><div class="ccount">${c.count}</div></div>`).join('')
+    : '<div class="empty"><div class="ei">📋</div><p>No assessment data yet</p></div>';
+}
+function updateDashCharts(){
+  const days=[];
+  for(let i=6;i>=0;i--){const d=new Date();d.setDate(d.getDate()-i);days.push({ds:d.toISOString().split('T')[0],lbl:d.toLocaleDateString('en',{weekday:'short'})});}
+  const maxW=Math.max(...days.map(d=>DB.payments.filter(p=>toISO(p.date)===d.ds).reduce((s,p)=>s+safeNum(p.paidAmount),0)),1);
+  document.getElementById('d-rvchart').innerHTML=days.map(d=>{
+    const v=DB.payments.filter(p=>toISO(p.date)===d.ds).reduce((s,p)=>s+safeNum(p.paidAmount),0);
+    return`<div class="bc-col"><div class="bcval">${v?'₹'+(v/1000).toFixed(1)+'k':''}</div><div class="bc-bar" style="height:${Math.max(3,(v/maxW)*125)}px;"></div><div class="bclbl">${d.lbl}</div></div>`;
+  }).join('');
+}
+function updateDashLists(){
+  const rp=DB.patients.slice(-5).reverse();
   document.getElementById('d-rp').innerHTML=rp.length
-    ?rp.map(p=>`<div style="display:flex;align-items:center;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--g50);"><div><div style="font-size:13px;font-weight:600;">${p.name||p.patientName||'—'}</div><div style="font-size:11px;color:var(--g400);">${p.phone||''} · ${fmtDate(p.dateAdded||p.date||'')}</div></div><span class="bdg b-blue">${p.patientId||p.assessmentId||''}</span></div>`).join('')
+    ?rp.map(p=>`<div style="display:flex;align-items:center;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--g50);"><div><div style="font-size:13px;font-weight:600;">${esc(p.name)}</div><div style="font-size:11px;color:var(--g400);">${esc(p.phone||'')} · ${fmtDate(p.dateAdded)}</div></div><span class="bdg b-blue">${esc(p.patientId||'')}</span></div>`).join('')
     :'<div class="empty"><div class="ei">👥</div><p>No patients yet</p></div>';
-
-  const ra=d.recentAppointments||[];
+  const ra=DB.appointments.slice(-5).reverse();
   document.getElementById('d-ra').innerHTML=ra.length
-    ?ra.map(a=>`<div style="display:flex;align-items:center;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--g50);"><div><div style="font-size:13px;font-weight:600;">${a.patientName||'—'}</div><div style="font-size:11px;color:var(--g400);">${fmtDate(a.date||'')} ${a.time||''}</div></div><span class="bdg b-orange">${a.condition||'—'}</span></div>`).join('')
+    ?ra.map(a=>`<div style="display:flex;align-items:center;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--g50);"><div><div style="font-size:13px;font-weight:600;">${esc(a.patientName)}</div><div style="font-size:11px;color:var(--g400);">${fmtDate(a.date)} ${fmtTime(a.time)}</div></div><span class="bdg b-orange">${esc(a.condition||'—')}</span></div>`).join('')
     :'<div class="empty"><div class="ei">📅</div><p>No appointments yet</p></div>';
-
-  const rpay=d.recentPayments||[];
-  document.getElementById('d-rpay').innerHTML=rpay.length
-    ?rpay.map(p=>`<div style="display:flex;align-items:center;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--g50);"><div><div style="font-size:13px;font-weight:600;">${p.patientName||'—'}</div><div style="font-size:11px;color:var(--g400);">${fmtDate(p.paymentDate||p.date||'')} · ${p.paymentMethod||p.paymentMode||'—'}</div></div><span style="font-size:13px;font-weight:700;color:var(--green);">₹${fmt(p.amount||p.paidAmount||0)}</span></div>`).join('')
-    :'<div class="empty"><div class="ei">💳</div><p>No payments yet</p></div>';
 }
 function renderDashEmpty(){
   ['d-tp','d-ta','d-tr','d-mr'].forEach(id=>document.getElementById(id).textContent='—');
-  ['d-conds','d-rvchart','d-rp','d-ra','d-rpay'].forEach(id=>document.getElementById(id).innerHTML=`<div class="empty" style="padding:20px;font-size:12px;"><p>Configure Google Sheets Setup first</p></div>`);
+  const msg = GAS ? 'Loading data…' : 'Configure Google Sheets Setup to begin';
+  ['d-conds','d-rvchart','d-rp','d-ra'].forEach(id=>document.getElementById(id).innerHTML=`<div class="empty" style="padding:18px;"><p>${msg}</p></div>`);
 }
 
-// PATIENTS
-async function loadPat(){
-  if(!GAS){DB.patients=[];renderPat();return;}
-  const r=await gasGet('getPatients');
-  if(r.ok)DB.patients=r.data||[];
-  renderPat();
-}
+// ═══════════════════════════════════════════
+//  PATIENTS
+// ═══════════════════════════════════════════
 function renderPat(){
-  const q=(document.getElementById('psearch')?.value||'').toLowerCase();
-  const list=DB.patients.filter(p=>!q||p.name?.toLowerCase().includes(q)||p.phone?.includes(q));
+  const q=(document.getElementById('psearch')?.value||'').toLowerCase().trim();
+  const list=DB.patients.filter(p=>!q||
+    (p.name||'').toLowerCase().includes(q)||
+    (p.phone||'').includes(q)||
+    (p.patientId||'').toLowerCase().includes(q)
+  );
   const tb=document.getElementById('ptbody');
-  if(!list.length){tb.innerHTML=`<tr><td colspan="8"><div class="empty"><div class="ei">👥</div><h3>${GAS?'No patients yet':'Setup Google Sheets first'}</h3><p>Patients are created automatically when assessments are saved.</p></div></td></tr>`;return;}
+  if(!list.length){
+    tb.innerHTML=`<tr><td colspan="8"><div class="empty"><div class="ei">👥</div><h3>${GAS?'No patients yet':'Setup Google Sheets first'}</h3><p>Patients are created automatically when assessments are saved.</p></div></td></tr>`;
+    return;
+  }
   tb.innerHTML=list.map(p=>`<tr>
-    <td><span class="bdg b-blue">${p.patientId||'—'}</span></td>
-    <td><strong>${p.name||'—'}</strong></td>
-    <td>${p.age||'—'}</td>
-    <td>${p.gender||'—'}</td>
-    <td>${p.phone||'—'}</td>
-    <td>${p.occupation||'—'}</td>
-    <td>${fmtDate(p.dateAdded||'')}</td>
+    <td><span class="bdg b-blue">${esc(p.patientId||'—')}</span></td>
+    <td><strong>${esc(p.name||'—')}</strong></td>
+    <td>${esc(p.age||'—')}</td>
+    <td>${esc(p.gender||'—')}</td>
+    <td>${esc(p.phone||'—')}</td>
+    <td>${esc(p.occupation||'—')}</td>
+    <td>${fmtDate(p.dateAdded)}</td>
     <td><div class="acell">
-      <button class="btn bout bsm" onclick="viewPatAssess('${escQ(p.phone)}')">👁 Assessment</button>
-      <button class="btn bout bsm" onclick="editPat('${escQ(p.patientId)}')">✏️ Edit</button>
-      <button class="btn bdanger bsm" onclick="delPat('${escQ(p.patientId)}')">🗑</button>
-      <button class="btn bwa bsm" onclick="waShareAssess('${escQ(p.phone)}','${escQ(p.name)}')">💬 WA</button>
+      <button class="btn bout bxsm" onclick="viewPatient('${esc(p.patientId)}')">👁</button>
+      <button class="btn bout bxsm" onclick="editPatient('${esc(p.patientId)}')">✏️</button>
+      <button class="btn bdanger bxsm" onclick="delPatient('${esc(p.patientId)}')">🗑</button>
+      ${(p.phone&&p.phone.trim())?`<button class="btn bxsm" style="background:#25d366;color:#fff;" onclick="waPatient('${esc(p.patientId)}')">💬</button>`:''}
+      <button class="btn bout bxsm" onclick="printPatient('${esc(p.patientId)}')">🖨</button>
     </div></td>
   </tr>`).join('');
 }
-function escQ(s){return String(s||'').replace(/\\/g,'\\\\').replace(/'/g,"\\'").replace(/"/g,'&quot;');}
-// Safe record lookup map — avoids any quote/special-char issues in onclick
-const _REC={};
-function _reg(obj){const k='r'+Math.random().toString(36).slice(2);_REC[k]=obj;return k;}
-function _get(k){return _REC[k]||null;}
-
-function viewPatAssess(phone){
-  const a=DB.assessments.find(x=>x.phone===phone)||DB.assessments.find(x=>x.patientPhone===phone);
-  if(!a){toast('No assessment found for this patient','err');return;}
-  viewAssessById(a.assessmentId||a.id);
-}
-
-function editPat(id){
+function viewPatient(id){
   const p=DB.patients.find(x=>x.patientId===id);
   if(!p){toast('Patient not found','err');return;}
-  document.getElementById('ep-id').value=id;
-  document.getElementById('ep-name').value=p.name||'';
-  document.getElementById('ep-age').value=p.age||'';
-  document.getElementById('ep-phone').value=p.phone||'';
-  document.getElementById('ep-addr').value=p.address||'';
-  document.getElementById('ep-occ').value=p.occupation||'';
-  const gs=document.getElementById('ep-gender');
-  for(let i=0;i<gs.options.length;i++)if(gs.options[i].value===p.gender)gs.selectedIndex=i;
-  openOv('ov-editpat');
+  const assesses=DB.assessments.filter(a=>a.patientId===id||a.phone===p.phone);
+  document.getElementById('view-title').textContent='Patient: '+p.name;
+  document.getElementById('view-bd').innerHTML=`
+    <div style="background:linear-gradient(120deg,var(--navy),var(--navy3));border-radius:11px;padding:18px;color:#fff;margin-bottom:16px;">
+      <div style="font-size:17px;font-weight:800;">${esc(p.name)}</div>
+      <div style="font-size:12px;opacity:.7;margin-top:3px;">${esc(p.patientId)} · ${esc(p.age||'—')}y · ${esc(p.gender||'—')} · ${esc(p.phone||'—')}</div>
+    </div>
+    <div>${vrow('Occupation',p.occupation)}${vrow('Date Added',fmtDate(p.dateAdded))}</div>
+    <div style="margin-top:12px;font-size:12px;font-weight:700;color:var(--g500);text-transform:uppercase;letter-spacing:.5px;">Assessments (${assesses.length})</div>
+    ${assesses.length?assesses.slice(-3).map(a=>`<div style="border:1px solid var(--g200);border-radius:8px;padding:10px 13px;margin-top:8px;font-size:13px;"><strong>${fmtDate(a.date)}</strong> · ${esc(a.chiefComplaint||'—')}<br><span style="color:var(--g500);">Dx: ${esc(a.diagnosis||'—')}</span></div>`).join(''):'<p style="font-size:12px;color:var(--g400);margin-top:8px;">No assessments found</p>'}`;
+  document.getElementById('view-ft').innerHTML=`
+    <button class="btn bout bsm" onclick="closeOv('ov-view')">Close</button>
+    <button class="btn bp bsm" onclick="closeOv('ov-view');editPatient('${id}')">✏️ Edit</button>
+    <button class="btn bsm" style="background:#25d366;color:#fff;" onclick="waPatient('${id}')">💬 WhatsApp</button>
+    <button class="btn bout bsm" onclick="printPatient('${id}')">🖨 Print</button>`;
+  openOv('ov-view');
 }
-async function saveEditPat(){
-  const id=document.getElementById('ep-id').value;
-  const name=document.getElementById('ep-name').value.trim();
-  if(!name){toast('Name is required','err');return;}
-  if(!GAS){toast('Google Sheets not configured','err');return;}
-  const pay={patientId:id,name,age:document.getElementById('ep-age').value,gender:document.getElementById('ep-gender').value,phone:document.getElementById('ep-phone').value,address:document.getElementById('ep-addr').value,occupation:document.getElementById('ep-occ').value};
-  showL('Saving…');
-  const r=await gasPost('updatePatient',pay);
-  hideL();
-  if(r.ok){toast('Patient updated!','ok');closeOv('ov-editpat');loadPat();}
-  else toast(r.error||'Save failed','err');
+function editPatient(id){
+  const p=DB.patients.find(x=>x.patientId===id);
+  if(!p){toast('Patient not found','err');return;}
+  // Find most recent assessment for this patient to pre-fill
+  const a=DB.assessments.filter(x=>x.patientId===id||x.phone===p.phone).slice(-1)[0];
+  if(a){
+    // Open assessment edit
+    editAssessment(a.assessmentId||a['assessment Id']||a['Assessment ID']);
+  } else {
+    toast('No assessment found for this patient to edit','err');
+  }
 }
-async function delPat(id){
-  if(!confirm('Delete this patient? This cannot be undone.'))return;
+async function delPatient(id){
+  if(!confirm('Delete this patient and all their data? This cannot be undone.')) return;
   if(!GAS){toast('Google Sheets not configured','err');return;}
   showL('Deleting…');
   const r=await gasPost('deletePatient',{patientId:id});
   hideL();
-  if(r.ok){toast('Deleted','ok');loadPat();loadDash();}
-  else toast(r.error||'Failed','err');
+  if(r.ok){toast('Patient deleted','ok');await loadPat();updateDashCounts();}
+  else toast(r.error||'Delete failed','err');
 }
-function waShareAssess(phone, name){
-  const a=DB.assessments.find(x=>x.phone===phone||x.patientPhone===phone)||{};
-  const msg=`Dear ${name||a.patientName||'Patient'},\n\nYour physiotherapy assessment summary from Urban Physio Center:\n\nDiagnosis: ${a.diagnosis||'—'}\nChief Complaint: ${a.chiefComplaints||a.chiefComplaint||'—'}\n\nTreatment Plan:\n- Lengthening: ${a.lengtheningExercises||'—'}\n- Strengthening: ${a.strengtheningExercises||'—'}\n- Modalities: ${a.modalities||a.modalitiesOtherTreatment||'—'}\n\nFollow-up Date: ${fmtDate(a.followUpDate||a.followupDate||'')}\n\nThank you,\nUrban Physio Center\nDr. S. Ramesh PT`;
-  const num=String(phone||'').replace(/\D/g,'');
-  window.open(`https://wa.me/91${num}?text=${encodeURIComponent(msg)}`,'_blank');
-}
-
-// ADD PATIENT / ASSESSMENT FORM
-function initAddPatForm(){
-  const today=td();
-  document.getElementById('ap-date').value=today;
-  document.getElementById('ap-therapist-date').textContent=fmtDate(today);
-  document.getElementById('ap-datedisp').textContent=fmtDate(today);
-  buildPainScale();
-}
-function buildPainScale(){
-  const colors=['#22c55e','#4ade80','#86efac','#bbf7d0','#fde047','#fbbf24','#fb923c','#f87171','#ef4444','#dc2626','#991b1b'];
-  const labels=['No Pain','Mild','','Moderate','','','Severe','','Very Severe','','Worst'];
-  const wrap=document.getElementById('ap-painscale');
-  wrap.innerHTML='';
-  for(let i=0;i<=10;i++){
-    const slot=document.createElement('div');
-    slot.className='pslot';
-    slot.style.background=colors[i];
-    slot.style.color=i<5?'#333':'#fff';
-    slot.dataset.val=i;
-    slot.innerHTML=`<span>${i}</span>${labels[i]?`<span style="font-size:8px;font-weight:600;">${labels[i]}</span>`:''}`;
-    slot.onclick=()=>selectPainScale(i);
-    wrap.appendChild(slot);
+function waPatient(id){
+  const p=DB.patients.find(x=>x.patientId===id);
+  if(!p||!p.phone){toast('No phone number on record','err');return;}
+  const a=DB.assessments.filter(x=>x.patientId===id||x.phone===p.phone).slice(-1)[0];
+  let msg=`Dear ${p.name},\n\n*${CLINIC}*\n\nHere is a summary of your assessment:\n\n`;
+  if(a){
+    if(a.chiefComplaint) msg+=`*Chief Complaint:* ${a.chiefComplaint}\n`;
+    if(a.diagnosis) msg+=`*Diagnosis:* ${a.diagnosis}\n`;
+    if(a.lengtheningExercises) msg+=`*Lengthening Exercises:* ${a.lengtheningExercises}\n`;
+    if(a.strengtheningExercises) msg+=`*Strengthening Exercises:* ${a.strengtheningExercises}\n`;
+    if(a.homeExerciseProgram) msg+=`*Home Exercise Program:* ${a.homeExerciseProgram}\n`;
+    if(a.followUpDate) msg+=`*Follow-Up Date:* ${fmtDate(a.followUpDate)}\n`;
   }
+  msg+=`\n*Physiotherapist:* ${DOCTOR}\n\nThank you.`;
+  const phone=p.phone.replace(/\D/g,'');
+  window.open('https://wa.me/'+phone+'?text='+encodeURIComponent(msg),'_blank');
 }
-function selectPainScale(v){
-  document.getElementById('ap-painval').value=v;
-  document.querySelectorAll('.pslot').forEach((s,i)=>{s.classList.toggle('sel',i===v);});
-  const labels=['No Pain','Mild Pain','Mild Pain','Moderate Pain','Moderate Pain','Moderate Pain','Severe Pain','Severe Pain','Very Severe Pain','Very Severe Pain','Worst Pain Possible'];
-  document.getElementById('ap-painlabel').textContent=`Selected: ${v}/10 – ${labels[v]}`;
-}
-
-// BODY CHART
-function initBodyChart(){
-  const fc=document.getElementById('bc-front');
-  const bc=document.getElementById('bc-back');
-  drawBodyOutline(fc,'front');
-  drawBodyOutline(bc,'back');
-  [fc,bc].forEach(canvas=>{
-    canvas.addEventListener('click',e=>{
-      const rect=canvas.getBoundingClientRect();
-      const x=Math.round((e.clientX-rect.left)*(canvas.width/rect.width));
-      const y=Math.round((e.clientY-rect.top)*(canvas.height/rect.height));
-      const side=canvas.id==='bc-front'?'front':'back';
-      bodyMarks[side].push({x,y});
-      redrawChart(canvas,side);
-    });
-    canvas.addEventListener('touchstart',e=>{
-      e.preventDefault();
-      const touch=e.touches[0];
-      const rect=canvas.getBoundingClientRect();
-      const x=Math.round((touch.clientX-rect.left)*(canvas.width/rect.width));
-      const y=Math.round((touch.clientY-rect.top)*(canvas.height/rect.height));
-      const side=canvas.id==='bc-front'?'front':'back';
-      bodyMarks[side].push({x,y});
-      redrawChart(canvas,side);
-    },{passive:false});
-  });
-}
-function drawBodyOutline(canvas,side){
-  const ctx=canvas.getContext('2d');
-  ctx.clearRect(0,0,canvas.width,canvas.height);
-  ctx.strokeStyle='#94a3b8';
-  ctx.lineWidth=1.5;
-  ctx.fillStyle='#f8fafc';
-  // Head
-  ctx.beginPath();ctx.ellipse(80,20,14,18,0,0,Math.PI*2);ctx.fill();ctx.stroke();
-  // Neck
-  ctx.beginPath();ctx.moveTo(73,36);ctx.lineTo(87,36);ctx.lineTo(87,46);ctx.lineTo(73,46);ctx.closePath();ctx.fill();ctx.stroke();
-  // Torso
-  ctx.beginPath();ctx.moveTo(55,46);ctx.lineTo(105,46);ctx.lineTo(108,130);ctx.lineTo(52,130);ctx.closePath();ctx.fill();ctx.stroke();
-  // Left arm
-  ctx.beginPath();ctx.moveTo(55,46);ctx.lineTo(38,50);ctx.lineTo(26,100);ctx.lineTo(34,100);ctx.lineTo(46,56);ctx.lineTo(60,52);ctx.closePath();ctx.fill();ctx.stroke();
-  // Left forearm+hand
-  ctx.beginPath();ctx.moveTo(26,100);ctx.lineTo(22,145);ctx.lineTo(30,145);ctx.lineTo(34,100);ctx.closePath();ctx.fill();ctx.stroke();
-  // Right arm
-  ctx.beginPath();ctx.moveTo(105,46);ctx.lineTo(122,50);ctx.lineTo(134,100);ctx.lineTo(126,100);ctx.lineTo(114,56);ctx.lineTo(100,52);ctx.closePath();ctx.fill();ctx.stroke();
-  // Right forearm+hand
-  ctx.beginPath();ctx.moveTo(134,100);ctx.lineTo(138,145);ctx.lineTo(130,145);ctx.lineTo(126,100);ctx.closePath();ctx.fill();ctx.stroke();
-  // Left leg
-  ctx.beginPath();ctx.moveTo(52,130);ctx.lineTo(64,130);ctx.lineTo(62,200);ctx.lineTo(50,200);ctx.closePath();ctx.fill();ctx.stroke();
-  // Left lower leg
-  ctx.beginPath();ctx.moveTo(50,200);ctx.lineTo(62,200);ctx.lineTo(60,248);ctx.lineTo(48,248);ctx.closePath();ctx.fill();ctx.stroke();
-  // Right leg
-  ctx.beginPath();ctx.moveTo(96,130);ctx.lineTo(108,130);ctx.lineTo(110,200);ctx.lineTo(98,200);ctx.closePath();ctx.fill();ctx.stroke();
-  // Right lower leg
-  ctx.beginPath();ctx.moveTo(98,200);ctx.lineTo(110,200);ctx.lineTo(112,248);ctx.lineTo(100,248);ctx.closePath();ctx.fill();ctx.stroke();
-  // Side label
-  ctx.font='10px Segoe UI';ctx.fillStyle='#64748b';
-  ctx.fillText(side==='front'?'Front':'Back',60,258);
-}
-function redrawChart(canvas,side){
-  drawBodyOutline(canvas,side);
-  const ctx=canvas.getContext('2d');
-  bodyMarks[side].forEach(m=>{
-    ctx.beginPath();
-    ctx.arc(m.x,m.y,5,0,Math.PI*2);
-    ctx.fillStyle='rgba(220,38,38,0.75)';
-    ctx.fill();
-    ctx.strokeStyle='#991b1b';
-    ctx.lineWidth=1.5;
-    ctx.stroke();
-  });
-}
-function clearBodyChart(){
-  bodyMarks={front:[],back:[]};
-  redrawChart(document.getElementById('bc-front'),'front');
-  redrawChart(document.getElementById('bc-back'),'back');
-}
-function getBodyChartData(){
-  const fc=document.getElementById('bc-front');
-  const bc=document.getElementById('bc-back');
-  return {
-    frontImage: fc.toDataURL('image/png'),
-    backImage: bc.toDataURL('image/png'),
-    marks: JSON.stringify(bodyMarks)
-  };
-}
-
-function resetAddPatForm(){
-  ['ap-name','ap-age','ap-phone','ap-addr','ap-occ','ap-bp','ap-cc','ap-pastH','ap-psite','ap-pdur','ap-aggr','ap-relv','ap-mweak','ap-mtight','ap-bcnotes','ap-restr','ap-inv','ap-diag','ap-le','ap-se','ap-mod','ap-notes'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
-  ['ap-gender','ap-dm','ap-thy','ap-imp','ap-pside','ap-pnat'].forEach(id=>{const el=document.getElementById(id);if(el)el.selectedIndex=0;});
-  document.getElementById('ap-date').value=td();
-  document.getElementById('ap-painval').value='';
-  document.querySelectorAll('.pslot').forEach(s=>s.classList.remove('sel'));
-  document.getElementById('ap-painlabel').textContent='Tap to select pain level';
-  clearBodyChart();
-  const fu=document.getElementById('ap-followup');if(fu)fu.value='';
-  toast('Form cleared','ok');
-}
-
-async function saveAddPat(){
-  const name=document.getElementById('ap-name').value.trim();
-  const phone=document.getElementById('ap-phone').value.trim();
-  const age=document.getElementById('ap-age').value.trim();
-  if(!name){toast('Patient name is required','err');return;}
-  if(!phone){toast('Phone number is required','err');return;}
-  if(!GAS){toast('Google Sheets not configured. Go to Setup.','err');return;}
-  const bcd=getBodyChartData();
-  const pay={
-    patientName:name,phone,age,
-    gender:document.getElementById('ap-gender').value,
-    address:document.getElementById('ap-addr').value,
-    occupation:document.getElementById('ap-occ').value,
-    date:document.getElementById('ap-date').value||td(),
-    bloodPressure:document.getElementById('ap-bp').value,
-    diabetes:document.getElementById('ap-dm').value,
-    thyroid:document.getElementById('ap-thy').value,
-    implants:document.getElementById('ap-imp').value,
-    chiefComplaints:document.getElementById('ap-cc').value,
-    pastHistory:document.getElementById('ap-pastH').value,
-    painSite:document.getElementById('ap-psite').value,
-    painSide:document.getElementById('ap-pside').value,
-    duration:document.getElementById('ap-pdur').value,
-    painNature:document.getElementById('ap-pnat').value,
-    aggravatingFactors:document.getElementById('ap-aggr').value,
-    relievingFactors:document.getElementById('ap-relv').value,
-    muscleWeak:document.getElementById('ap-mweak').value,
-    muscleTight:document.getElementById('ap-mtight').value,
-    painScale:document.getElementById('ap-painval').value,
-    bodyChartMarks:bcd.marks,
-    bodyChartNotes:document.getElementById('ap-bcnotes').value,
-    restrictedActivities:document.getElementById('ap-restr').value,
-    investigationNotes:document.getElementById('ap-inv').value,
-    diagnosis:document.getElementById('ap-diag').value,
-    lengtheningExercises:document.getElementById('ap-le').value,
-    strengtheningExercises:document.getElementById('ap-se').value,
-    modalities:document.getElementById('ap-mod').value,
-    followUpDate:document.getElementById('ap-followup').value,
-    assessmentNotes:document.getElementById('ap-notes').value,
-    therapist:'Dr. S. Ramesh PT',
-  };
-  showL('Saving assessment…');
-  const r=await gasPost('createAssessment',pay);
-  hideL();
-  if(r.ok){
-    toast('Assessment saved & patient created!','ok');
-    resetAddPatForm();
-    loadAll();
-    setTimeout(()=>nav(document.querySelector('[data-pg=patients]')),600);
-  }else toast(r.error||'Save failed','err');
-}
-
-// ASSESSMENTS (for view from patients)
-async function loadAssessments(){
-  if(!GAS){DB.assessments=[];return;}
-  const r=await gasGet('getAssessments');
-  if(r.ok)DB.assessments=r.data||[];
-}
-function viewAssessById(id){
-  const a=DB.assessments.find(x=>(x.assessmentId||x.id)===id);
-  if(!a){toast('Assessment not found','err');return;}
-  const row=(l,v)=>v?`<div style="display:flex;gap:8px;padding:6px 0;border-bottom:1px solid var(--g50);font-size:13px;"><span style="min-width:160px;font-weight:600;color:var(--g600);flex-shrink:0;">${l}</span><span style="color:var(--g800);white-space:pre-wrap;">${v}</span></div>`:'';
-  document.getElementById('aviewbd').innerHTML=`
-    <div style="background:linear-gradient(120deg,var(--navy),var(--navy3));border-radius:11px;padding:18px;color:#fff;margin-bottom:16px;">
-      <div style="font-size:17px;font-weight:800;">${a.patientName||'—'}</div>
-      <div style="font-size:12px;opacity:.7;margin-top:3px;">${a.assessmentId||''} · ${fmtDate(a.date||'')} · ${a.age||''}y / ${a.gender||''}</div>
-    </div>
-    <div>
-      ${row('Phone',a.phone||a.patientPhone)}
-      ${row('Address',a.address)}
-      ${row('Occupation',a.occupation)}
-      ${row('Blood Pressure',a.bloodPressure)}
-      ${row('Diabetes',a.diabetes)}
-      ${row('Thyroid',a.thyroid)}
-      ${row('Implants',a.implants)}
-      ${row('Chief Complaints',a.chiefComplaints||a.chiefComplaint)}
-      ${row('Past History',a.pastHistory)}
-      ${row('Pain Site',a.painSite)}
-      ${row('Pain Side',a.painSide)}
-      ${row('Duration',a.duration)}
-      ${row('Pain Nature',a.painNature)}
-      ${row('Aggravating Factors',a.aggravatingFactors)}
-      ${row('Relieving Factors',a.relievingFactors)}
-      ${row('Muscle Weak',a.muscleWeak)}
-      ${row('Muscle Tight',a.muscleTight)}
-      ${row('Pain Scale',a.painScale!==undefined&&a.painScale!==''?a.painScale+'/10':'')}
-      ${row('Body Chart Notes',a.bodyChartNotes)}
-      ${row('Restricted Activities',a.restrictedActivities)}
-      ${row('Investigation Notes',a.investigationNotes)}
-      ${row('Diagnosis',a.diagnosis)}
-      ${row('Lengthening Exercises',a.lengtheningExercises)}
-      ${row('Strengthening Exercises',a.strengtheningExercises)}
-      ${row('Modalities / Other',a.modalities||a.modalitiesOtherTreatment)}
-      ${row('Follow-up Date',fmtDate(a.followUpDate||a.followupDate))}
-      ${row('Assessment Notes',a.assessmentNotes||a.sessionNotes)}
-      ${row('Therapist',a.therapist||'Dr. S. Ramesh PT')}
+function printPatient(id){
+  const p=DB.patients.find(x=>x.patientId===id);
+  if(!p){toast('Patient not found','err');return;}
+  const a=DB.assessments.filter(x=>x.patientId===id||x.phone===p.phone).slice(-1)[0];
+  const html=`
+    <div style="font-family:Arial,sans-serif;max-width:700px;margin:0 auto;padding:30px;">
+      <div style="text-align:center;border-bottom:3px solid #1E4E8C;padding-bottom:16px;margin-bottom:20px;">
+        <h1 style="color:#1E4E8C;font-size:22px;margin:0;">${CLINIC}</h1>
+        <p style="color:#F47C20;margin:4px 0;font-size:13px;">Move Better, Live Stronger</p>
+        <p style="font-size:12px;color:#64748b;">Patient Details Report</p>
+      </div>
+      <table style="width:100%;border-collapse:collapse;margin-bottom:20px;">
+        <tr><td style="padding:7px 10px;border:1px solid #e2e8f0;font-weight:700;width:35%;background:#f8fafc;">Patient ID</td><td style="padding:7px 10px;border:1px solid #e2e8f0;">${esc(p.patientId||'—')}</td></tr>
+        <tr><td style="padding:7px 10px;border:1px solid #e2e8f0;font-weight:700;background:#f8fafc;">Name</td><td style="padding:7px 10px;border:1px solid #e2e8f0;">${esc(p.name||'—')}</td></tr>
+        <tr><td style="padding:7px 10px;border:1px solid #e2e8f0;font-weight:700;background:#f8fafc;">Age</td><td style="padding:7px 10px;border:1px solid #e2e8f0;">${esc(p.age||'—')}</td></tr>
+        <tr><td style="padding:7px 10px;border:1px solid #e2e8f0;font-weight:700;background:#f8fafc;">Gender</td><td style="padding:7px 10px;border:1px solid #e2e8f0;">${esc(p.gender||'—')}</td></tr>
+        <tr><td style="padding:7px 10px;border:1px solid #e2e8f0;font-weight:700;background:#f8fafc;">Phone</td><td style="padding:7px 10px;border:1px solid #e2e8f0;">${esc(p.phone||'—')}</td></tr>
+        <tr><td style="padding:7px 10px;border:1px solid #e2e8f0;font-weight:700;background:#f8fafc;">Occupation</td><td style="padding:7px 10px;border:1px solid #e2e8f0;">${esc(p.occupation||'—')}</td></tr>
+        <tr><td style="padding:7px 10px;border:1px solid #e2e8f0;font-weight:700;background:#f8fafc;">Date Added</td><td style="padding:7px 10px;border:1px solid #e2e8f0;">${fmtDate(p.dateAdded)}</td></tr>
+      </table>
+      ${a?`
+      <h3 style="color:#1E4E8C;border-bottom:2px solid #e2e8f0;padding-bottom:6px;margin-bottom:12px;">Assessment Summary (${fmtDate(a.date)})</h3>
+      <table style="width:100%;border-collapse:collapse;margin-bottom:20px;">
+        ${a.chiefComplaint?`<tr><td style="padding:7px 10px;border:1px solid #e2e8f0;font-weight:700;width:35%;background:#f8fafc;">Chief Complaint</td><td style="padding:7px 10px;border:1px solid #e2e8f0;">${esc(a.chiefComplaint)}</td></tr>`:''}
+        ${a.diagnosis?`<tr><td style="padding:7px 10px;border:1px solid #e2e8f0;font-weight:700;background:#f8fafc;">Diagnosis</td><td style="padding:7px 10px;border:1px solid #e2e8f0;">${esc(a.diagnosis)}</td></tr>`:''}
+        ${a.lengtheningExercises?`<tr><td style="padding:7px 10px;border:1px solid #e2e8f0;font-weight:700;background:#f8fafc;">Treatment Plan</td><td style="padding:7px 10px;border:1px solid #e2e8f0;">${esc(a.lengtheningExercises)}</td></tr>`:''}
+        ${a.followUpDate?`<tr><td style="padding:7px 10px;border:1px solid #e2e8f0;font-weight:700;background:#f8fafc;">Follow-Up</td><td style="padding:7px 10px;border:1px solid #e2e8f0;">${fmtDate(a.followUpDate)}</td></tr>`:''}
+      </table>`:''}
+      <div style="margin-top:30px;border-top:1px solid #e2e8f0;padding-top:16px;display:flex;justify-content:space-between;">
+        <div><p style="font-size:12px;color:#64748b;">Physiotherapist</p><p style="font-weight:700;">${DOCTOR}</p></div>
+        <div style="text-align:right;"><p style="font-size:11px;color:#94a3b8;">${CLINIC}</p><p style="font-size:11px;color:#94a3b8;">Printed: ${fmtDate(td())}</p></div>
+      </div>
     </div>`;
-  document.getElementById('aviewft').innerHTML=`<button class="btn bwa" onclick="waShareAssess('${escQ(a.phone||a.patientPhone)}','${escQ(a.patientName)}')">💬 Share via WhatsApp</button><button class="btn bout" onclick="closeOv('ov-aview')">Close</button>`;
-  openOv('ov-aview');
+  doPrint(html);
 }
 
-// APPOINTMENTS
-async function loadAppts(){
-  if(!GAS){DB.appointments=[];renderAppts();return;}
-  const r=await gasGet('getAppointments');
-  if(r.ok)DB.appointments=r.data||[];
-  renderAppts();
-}
-function apptStatus(dateStr){
-  if(!dateStr)return{label:'—',cls:'b-blue'};
-  const d=new Date(dateStr+'T00:00:00');
-  const t=new Date(); t.setHours(0,0,0,0);
-  if(d<t)return{label:'Completed',cls:'b-green'};
-  if(d.getTime()===t.getTime())return{label:'Today',cls:'b-orange'};
-  return{label:'Upcoming',cls:'b-blue'};
-}
-function renderAppts(){
-  const q=(document.getElementById('apsearch')?.value||'').toLowerCase();
-  const list=DB.appointments.filter(a=>!q||a.patientName?.toLowerCase().includes(q)||a.phone?.includes(q));
-  const tb=document.getElementById('aptbody');
-  if(!list.length){tb.innerHTML=`<tr><td colspan="8"><div class="empty"><div class="ei">📅</div><h3>${GAS?'No appointments yet':'Setup Google Sheets first'}</h3><p>Click "+ New Appointment" to add one.</p></div></td></tr>`;return;}
+// ═══════════════════════════════════════════
+//  ASSESSMENTS
+// ═══════════════════════════════════════════
+function renderAssess(){
+  const q=(document.getElementById('asearch')?.value||'').toLowerCase().trim();
+  const list=DB.assessments.filter(a=>!q||(a.patientName||'').toLowerCase().includes(q)||(a.phone||'').includes(q));
+  const tb=document.getElementById('atbody');
+  if(!list.length){
+    tb.innerHTML=`<tr><td colspan="8"><div class="empty"><div class="ei">📋</div><h3>${GAS?'No assessments yet':'Setup Google Sheets first'}</h3><p>Click "+ New Assessment" to create one.</p></div></td></tr>`;
+    return;
+  }
   tb.innerHTML=list.map(a=>{
-    const st=apptStatus(a.date||a.appointmentDate);
+    const aid=esc(a.assessmentId||a['Assessment ID']||'');
     return`<tr>
-    <td><span class="bdg b-blue">${a.appointmentId||a.id||'—'}</span></td>
-    <td><strong>${a.patientName||'—'}</strong></td>
-    <td>${a.phone||'—'}</td>
-    <td>${a.condition||'—'}</td>
-    <td>${fmtDate(a.date||a.appointmentDate||'')}</td>
-    <td>${a.time||a.appointmentTime||'—'}</td>
-    <td><span class="bdg ${st.cls}">${st.label}</span></td>
+    <td><span class="bdg b-blue">${esc(a.assessmentId||a['Assessment ID']||'—')}</span></td>
+    <td><strong>${esc(a.patientName||'—')}</strong></td>
+    <td>${esc(a.phone||'—')}</td>
+    <td>${esc(a.age||'—')} / ${esc(a.gender||'—')}</td>
+    <td>${fmtDate(a.date)}</td>
+    <td style="max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="${esc(a.chiefComplaint||'')}">${esc((a.chiefComplaint||'').substring(0,45))||'—'}</td>
+    <td style="max-width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="${esc(a.diagnosis||'')}">${esc((a.diagnosis||'').substring(0,40))||'—'}</td>
     <td><div class="acell">
-      <button class="btn bout bsm" onclick="viewAppt('${escQ(a.appointmentId||a.id)}')">👁</button>
-      <button class="btn bout bsm" onclick="editAppt('${escQ(a.appointmentId||a.id)}')">✏️</button>
-      <button class="btn bdanger bsm" onclick="delAppt('${escQ(a.appointmentId||a.id)}')">🗑</button>
-      <button class="btn bwa bsm" onclick="waApptReminder('${escQ(a.appointmentId||a.id)}')">💬</button>
+      <button class="btn bout bxsm" onclick="viewAssessment('${aid}')">👁</button>
+      <button class="btn bout bxsm" onclick="editAssessment('${aid}')">✏️</button>
+      <button class="btn bdanger bxsm" onclick="delAssessment('${aid}')">🗑</button>
+      <button class="btn bxsm" style="background:#25d366;color:#fff;" onclick="waAssessment('${aid}')">💬</button>
+      <button class="btn bout bxsm" onclick="printAssessment('${aid}')">🖨</button>
     </div></td>
   </tr>`;}).join('');
 }
+function openAssess(){
+  document.getElementById('assess-modal-title').textContent='New Physiotherapy Assessment';
+  document.getElementById('af-edit-id').value='';
+  document.getElementById('af-date').value=td();
+  ['af-name','af-phone','af-age','af-occ','af-bp','af-cc','af-ph','af-pain','af-pe','af-posture','af-rom','af-ms','af-fl','af-ra','af-diag','af-le','af-se','af-hep','af-sn','af-followup'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
+  ['af-gender','af-dm','af-thy','af-imp'].forEach(id=>{const el=document.getElementById(id);if(el)el.selectedIndex=0;});
+  openOv('ov-assess');
+}
+function editAssessment(id){
+  const a=DB.assessments.find(x=>(x.assessmentId||x['Assessment ID'])===id);
+  if(!a){toast('Assessment not found','err');return;}
+  document.getElementById('assess-modal-title').textContent='Edit Assessment';
+  document.getElementById('af-edit-id').value=id;
+  setV('af-name',a.patientName);setV('af-phone',a.phone);setV('af-age',a.age);
+  setSel('af-gender',a.gender);setV('af-occ',a.occupation);
+  document.getElementById('af-date').value=toISO(a.date);
+  setV('af-bp',a.bloodPressure);setSel('af-dm',a.diabetes);setSel('af-thy',a.thyroid);setSel('af-imp',a.implants);
+  setV('af-cc',a.chiefComplaint);setV('af-ph',a.pastHistory);setV('af-pain',a.painHistory);
+  setV('af-pe',a.physicalExamination);setV('af-posture',a.postureAnalysis);setV('af-rom',a.rangeOfMotion);
+  setV('af-ms',a.muscleStrength);setV('af-fl',a.functionalLimitations);setV('af-ra',a.restrictedActivities);
+  setV('af-diag',a.diagnosis);setV('af-le',a.lengtheningExercises);setV('af-se',a.strengtheningExercises);
+  setV('af-hep',a.homeExerciseProgram);setV('af-sn',a.sessionNotes);
+  document.getElementById('af-followup').value=toISO(a.followUpDate||'');
+  openOv('ov-assess');
+}
+async function saveAssess(){
+  const name=document.getElementById('af-name').value.trim();
+  const phone=document.getElementById('af-phone').value.trim();
+  if(!name){toast('Patient name is required','err');return;}
+  if(!GAS){toast('Google Sheets not configured. Go to Setup.','err');return;}
+  const editId=document.getElementById('af-edit-id').value;
+  const payload={
+    assessmentId:editId||'',
+    patientName:name, phone, age:document.getElementById('af-age').value,
+    gender:document.getElementById('af-gender').value,
+    occupation:document.getElementById('af-occ').value,
+    date:document.getElementById('af-date').value,
+    bloodPressure:document.getElementById('af-bp').value,
+    diabetes:document.getElementById('af-dm').value,
+    thyroid:document.getElementById('af-thy').value,
+    implants:document.getElementById('af-imp').value,
+    chiefComplaint:document.getElementById('af-cc').value,
+    pastHistory:document.getElementById('af-ph').value,
+    painHistory:document.getElementById('af-pain').value,
+    physicalExamination:document.getElementById('af-pe').value,
+    postureAnalysis:document.getElementById('af-posture').value,
+    rangeOfMotion:document.getElementById('af-rom').value,
+    muscleStrength:document.getElementById('af-ms').value,
+    functionalLimitations:document.getElementById('af-fl').value,
+    restrictedActivities:document.getElementById('af-ra').value,
+    diagnosis:document.getElementById('af-diag').value,
+    lengtheningExercises:document.getElementById('af-le').value,
+    strengtheningExercises:document.getElementById('af-se').value,
+    homeExerciseProgram:document.getElementById('af-hep').value,
+    sessionNotes:document.getElementById('af-sn').value,
+    followUpDate:document.getElementById('af-followup').value,
+  };
+  showL(editId?'Updating assessment…':'Saving assessment…');
+  const action=editId?'updateAssessment':'createAssessment';
+  const r=await gasPost(action,payload);
+  hideL();
+  if(r.ok){
+    toast(editId?'Assessment updated!':'Assessment saved!','ok');
+    closeOv('ov-assess');
+    await Promise.all([loadAssess(),loadPat()]);
+    updateDashCounts(); updateDashConds();
+  } else toast(r.error||'Save failed','err');
+}
+async function delAssessment(id){
+  if(!confirm('Delete this assessment?')) return;
+  if(!GAS){toast('Google Sheets not configured','err');return;}
+  showL('Deleting…');
+  const r=await gasPost('deleteAssessment',{assessmentId:id});
+  hideL();
+  if(r.ok){toast('Assessment deleted','ok');await loadAssess();updateDashConds();}
+  else toast(r.error||'Delete failed','err');
+}
+function viewAssessment(id){
+  const a=DB.assessments.find(x=>(x.assessmentId||x['Assessment ID'])===id);
+  if(!a){toast('Not found','err');return;}
+  document.getElementById('view-title').textContent='Assessment: '+a.patientName;
+  document.getElementById('view-bd').innerHTML=`
+    <div style="background:linear-gradient(120deg,var(--navy),var(--navy3));border-radius:11px;padding:18px;color:#fff;margin-bottom:16px;">
+      <div style="font-size:17px;font-weight:800;">${esc(a.patientName)}</div>
+      <div style="font-size:12px;opacity:.7;margin-top:3px;">${esc(a.assessmentId||'')} · ${fmtDate(a.date)} · ${esc(a.age||'—')}y / ${esc(a.gender||'—')}</div>
+    </div>
+    <div>${vrow('Phone',a.phone)}${vrow('Occupation',a.occupation)}${vrow('Blood Pressure',a.bloodPressure)}${vrow('Diabetes',a.diabetes)}${vrow('Thyroid',a.thyroid)}${vrow('Implants',a.implants)}${vrow('Chief Complaint',a.chiefComplaint)}${vrow('Past History',a.pastHistory)}${vrow('Pain History',a.painHistory)}${vrow('Physical Examination',a.physicalExamination)}${vrow('Posture Analysis',a.postureAnalysis)}${vrow('Range of Motion',a.rangeOfMotion)}${vrow('Muscle Strength',a.muscleStrength)}${vrow('Functional Limitations',a.functionalLimitations)}${vrow('Restricted Activities',a.restrictedActivities)}${vrow('Diagnosis',a.diagnosis)}${vrow('Lengthening Exercises',a.lengtheningExercises)}${vrow('Strengthening Exercises',a.strengtheningExercises)}${vrow('Home Exercise Program',a.homeExerciseProgram)}${vrow('Session Notes',a.sessionNotes)}${vrow('Follow-Up Date',fmtDate(a.followUpDate))}</div>`;
+  document.getElementById('view-ft').innerHTML=`
+    <button class="btn bout bsm" onclick="closeOv('ov-view')">Close</button>
+    <button class="btn bp bsm" onclick="closeOv('ov-view');editAssessment('${id}')">✏️ Edit</button>
+    <button class="btn bsm" style="background:#25d366;color:#fff;" onclick="waAssessment('${id}')">💬 WhatsApp</button>
+    <button class="btn bout bsm" onclick="printAssessment('${id}')">🖨 Print</button>`;
+  openOv('ov-view');
+}
+function waAssessment(id){
+  const a=DB.assessments.find(x=>(x.assessmentId||x['Assessment ID'])===id);
+  if(!a){toast('Not found','err');return;}
+  if(!a.phone){toast('No phone number on record','err');return;}
+  let msg=`Dear ${a.patientName},\n\n*${CLINIC}*\n*Assessment Summary*\n\n`;
+  if(a.chiefComplaint) msg+=`*Chief Complaint:*\n${a.chiefComplaint}\n\n`;
+  if(a.diagnosis) msg+=`*Diagnosis:*\n${a.diagnosis}\n\n`;
+  if(a.lengtheningExercises) msg+=`*Lengthening Exercises:*\n${a.lengtheningExercises}\n\n`;
+  if(a.strengtheningExercises) msg+=`*Strengthening Exercises:*\n${a.strengtheningExercises}\n\n`;
+  if(a.homeExerciseProgram) msg+=`*Home Exercise Program:*\n${a.homeExerciseProgram}\n\n`;
+  if(a.followUpDate) msg+=`*Follow-Up Date:* ${fmtDate(a.followUpDate)}\n\n`;
+  msg+=`*Physiotherapist:* ${DOCTOR}\n\nThank you.`;
+  const phone=a.phone.replace(/\D/g,'');
+  window.open('https://wa.me/'+phone+'?text='+encodeURIComponent(msg),'_blank');
+}
+function printAssessment(id){
+  const a=DB.assessments.find(x=>(x.assessmentId||x['Assessment ID'])===id);
+  if(!a){toast('Not found','err');return;}
+  const prow=(l,v)=>v?`<tr><td style="padding:7px 10px;border:1px solid #e2e8f0;font-weight:700;width:35%;background:#f8fafc;vertical-align:top;">${l}</td><td style="padding:7px 10px;border:1px solid #e2e8f0;white-space:pre-wrap;">${esc(v)}</td></tr>`:'';
+  const html=`
+    <div style="font-family:Arial,sans-serif;max-width:720px;margin:0 auto;padding:28px;">
+      <div style="text-align:center;border-bottom:3px solid #1E4E8C;padding-bottom:14px;margin-bottom:18px;">
+        <h1 style="color:#1E4E8C;font-size:20px;margin:0;">${CLINIC}</h1>
+        <p style="color:#F47C20;margin:3px 0;font-size:12px;">Move Better, Live Stronger</p>
+        <p style="font-size:13px;font-weight:700;color:#334155;">Physiotherapy Assessment Report</p>
+      </div>
+      <h3 style="color:#1E4E8C;font-size:14px;margin-bottom:8px;">Patient Details</h3>
+      <table style="width:100%;border-collapse:collapse;margin-bottom:16px;">
+        ${prow('Patient Name',a.patientName)}${prow('Age / Gender',(a.age||'')+(a.gender?' / '+a.gender:''))}${prow('Phone',a.phone)}${prow('Occupation',a.occupation)}${prow('Assessment Date',fmtDate(a.date))}
+      </table>
+      <h3 style="color:#1E4E8C;font-size:14px;margin-bottom:8px;">Vitals</h3>
+      <table style="width:100%;border-collapse:collapse;margin-bottom:16px;">
+        ${prow('Blood Pressure',a.bloodPressure)}${prow('Diabetes',a.diabetes)}${prow('Thyroid',a.thyroid)}${prow('Implants',a.implants)}
+      </table>
+      <h3 style="color:#1E4E8C;font-size:14px;margin-bottom:8px;">Clinical Information</h3>
+      <table style="width:100%;border-collapse:collapse;margin-bottom:16px;">
+        ${prow('Chief Complaint',a.chiefComplaint)}${prow('Past History',a.pastHistory)}${prow('Pain History',a.painHistory)}
+      </table>
+      <h3 style="color:#1E4E8C;font-size:14px;margin-bottom:8px;">Physical Examination</h3>
+      <table style="width:100%;border-collapse:collapse;margin-bottom:16px;">
+        ${prow('Examination',a.physicalExamination)}${prow('Posture Analysis',a.postureAnalysis)}${prow('Range of Motion',a.rangeOfMotion)}${prow('Muscle Strength',a.muscleStrength)}${prow('Functional Limitations',a.functionalLimitations)}${prow('Restricted Activities',a.restrictedActivities)}
+      </table>
+      <h3 style="color:#1E4E8C;font-size:14px;margin-bottom:8px;">Diagnosis &amp; Treatment Plan</h3>
+      <table style="width:100%;border-collapse:collapse;margin-bottom:16px;">
+        ${prow('Diagnosis',a.diagnosis)}${prow('Lengthening Exercises',a.lengtheningExercises)}${prow('Strengthening Exercises',a.strengtheningExercises)}${prow('Home Exercise Program',a.homeExerciseProgram)}${prow('Session Notes',a.sessionNotes)}${prow('Follow-Up Date',fmtDate(a.followUpDate))}
+      </table>
+      <div style="margin-top:28px;border-top:1px solid #e2e8f0;padding-top:16px;display:flex;justify-content:space-between;">
+        <div><div style="font-size:12px;color:#64748b;margin-bottom:30px;">Therapist Signature</div><div style="border-top:1px solid #334155;padding-top:4px;font-size:13px;font-weight:700;">${DOCTOR}</div></div>
+        <div style="text-align:right;"><p style="font-size:11px;color:#94a3b8;">${CLINIC}</p><p style="font-size:11px;color:#94a3b8;">Date: ${fmtDate(td())}</p></div>
+      </div>
+    </div>`;
+  doPrint(html);
+}
+
+// ═══════════════════════════════════════════
+//  APPOINTMENTS
+// ═══════════════════════════════════════════
+function renderAppts(){
+  const q=(document.getElementById('apsearch')?.value||'').toLowerCase().trim();
+  const list=DB.appointments.filter(a=>!q||(a.patientName||'').toLowerCase().includes(q)||(a.phone||'').includes(q));
+  const tb=document.getElementById('aptbody');
+  if(!list.length){tb.innerHTML=`<tr><td colspan="8"><div class="empty"><div class="ei">📅</div><h3>${GAS?'No appointments yet':'Setup Google Sheets first'}</h3><p>Click "+ New Appointment" to add one.</p></div></td></tr>`;return;}
+  tb.innerHTML=list.map(a=>{
+    const aid=esc(a.appointmentId||a['Appointment ID']||'');
+    return`<tr>
+    <td><span class="bdg b-blue">${esc(a.appointmentId||a['Appointment ID']||'—')}</span></td>
+    <td><strong>${esc(a.patientName||'—')}</strong></td>
+    <td>${esc(a.phone||'—')}</td>
+    <td>${esc(a.condition||'—')}</td>
+    <td>${fmtDate(a.date)}</td>
+    <td>${fmtTime(a.time)}</td>
+    <td><span class="bdg ${statusBadge(a.status)}">${esc(a.status||'Scheduled')}</span></td>
+    <td><div class="acell">
+      <button class="btn bout bxsm" onclick="viewAppt('${aid}')">👁</button>
+      <button class="btn bout bxsm" onclick="editAppt('${aid}')">✏️</button>
+      <button class="btn bdanger bxsm" onclick="delAppt('${aid}')">🗑</button>
+      ${(a.phone&&a.phone.trim())?`<button class="btn bxsm" style="background:#25d366;color:#fff;" onclick="waAppt('${aid}')">💬</button>`:''}
+      <button class="btn bout bxsm" onclick="printAppt('${aid}')">🖨</button>
+    </div></td>
+  </tr>`;}).join('');
+}
+function statusBadge(s){return{Scheduled:'b-yellow',Confirmed:'b-blue',Completed:'b-green',Cancelled:'b-red'}[s]||'b-yellow';}
 function openAppt(){
-  EDITING_APPT=null;
   document.getElementById('appt-modal-title').textContent='New Appointment';
-  document.getElementById('apmod-id').value='';
-  document.getElementById('ap2-date').value=td();
-  ['ap2-name','ap2-phone','ap2-cond','ap2-notes'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
-  document.getElementById('ap2-time').value='';
+  document.getElementById('ap-edit-id').value='';
+  document.getElementById('ap-date').value=td();
+  ['ap-name','ap-phone','ap-age','ap-cond','ap-notes'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
+  document.getElementById('ap-gender').selectedIndex=0;
+  document.getElementById('ap-status').selectedIndex=0;
+  document.getElementById('ap-time').value='';
   openOv('ov-appt');
 }
-function viewAppt(id){
-  const a=DB.appointments.find(x=>(x.appointmentId||x.id)===id);
-  if(!a){toast('Not found','err');return;}
-  document.getElementById('apptviewbd').innerHTML=`
-    <div style="background:linear-gradient(120deg,var(--navy),var(--navy3));border-radius:9px;padding:14px 18px;color:#fff;margin-bottom:14px;">
-      <div style="font-size:15px;font-weight:800;">${a.patientName||'—'}</div>
-      <div style="opacity:.7;font-size:12px;margin-top:2px;">${a.appointmentId||a.id||''}</div>
-    </div>
-    <div style="display:grid;gap:8px;">
-      ${[['Phone',a.phone],['Condition',a.condition],['Date',fmtDate(a.date||a.appointmentDate)],['Time',a.time||a.appointmentTime],['Notes',a.notes],['Physiotherapist','Dr. S. Ramesh PT']].map(([l,v])=>v?`<div style="display:flex;gap:8px;padding:6px 0;border-bottom:1px solid var(--g50);font-size:13px;"><span style="min-width:130px;font-weight:600;color:var(--g600);">${l}</span><span>${v}</span></div>`:'').join('')}
-    </div>`;
-  openOv('ov-apptview');
-}
 function editAppt(id){
-  const a=DB.appointments.find(x=>(x.appointmentId||x.id)===id);
+  const a=DB.appointments.find(x=>(x.appointmentId||x['Appointment ID'])===id);
   if(!a){toast('Not found','err');return;}
-  EDITING_APPT=id;
   document.getElementById('appt-modal-title').textContent='Edit Appointment';
-  document.getElementById('apmod-id').value=id;
-  document.getElementById('ap2-name').value=a.patientName||'';
-  document.getElementById('ap2-phone').value=a.phone||'';
-  document.getElementById('ap2-cond').value=a.condition||'';
-  document.getElementById('ap2-date').value=a.date||a.appointmentDate||'';
-  document.getElementById('ap2-time').value=a.time||a.appointmentTime||'';
-  document.getElementById('ap2-notes').value=a.notes||'';
+  document.getElementById('ap-edit-id').value=id;
+  setV('ap-name',a.patientName);setV('ap-phone',a.phone);setV('ap-age',a.age);
+  setSel('ap-gender',a.gender);
+  document.getElementById('ap-date').value=toISO(a.date);
+  document.getElementById('ap-time').value=a.time||'';
+  setV('ap-cond',a.condition);setSel('ap-status',a.status||'Scheduled');setV('ap-notes',a.notes);
   openOv('ov-appt');
 }
 async function saveAppt(){
-  const name=document.getElementById('ap2-name').value.trim();
-  const date=document.getElementById('ap2-date').value;
-  const time=document.getElementById('ap2-time').value;
+  const name=document.getElementById('ap-name').value.trim();
+  const date=document.getElementById('ap-date').value;
+  const time=document.getElementById('ap-time').value;
   if(!name||!date||!time){toast('Name, date and time are required','err');return;}
   if(!GAS){toast('Google Sheets not configured. Go to Setup.','err');return;}
-  const pay={patientName:name,phone:document.getElementById('ap2-phone').value,date,time,condition:document.getElementById('ap2-cond').value,notes:document.getElementById('ap2-notes').value};
-  const action=EDITING_APPT?'updateAppointment':'createAppointment';
-  if(EDITING_APPT)pay.appointmentId=EDITING_APPT;
-  showL('Saving appointment…');
-  const r=await gasPost(action,pay);
+  const editId=document.getElementById('ap-edit-id').value;
+  const payload={
+    appointmentId:editId||'',
+    patientName:name, phone:document.getElementById('ap-phone').value,
+    age:document.getElementById('ap-age').value,
+    gender:document.getElementById('ap-gender').value,
+    date, time,
+    condition:document.getElementById('ap-cond').value,
+    status:document.getElementById('ap-status').value,
+    notes:document.getElementById('ap-notes').value,
+  };
+  showL(editId?'Updating…':'Saving appointment…');
+  const r=await gasPost(editId?'updateAppointment':'createAppointment',payload);
   hideL();
-  if(r.ok){toast(EDITING_APPT?'Appointment updated!':'Appointment saved!','ok');closeOv('ov-appt');EDITING_APPT=null;loadAppts();loadDash();}
+  if(r.ok){toast(editId?'Updated!':'Appointment saved!','ok');closeOv('ov-appt');await loadAppts();updateDashCounts();}
   else toast(r.error||'Save failed','err');
 }
 async function delAppt(id){
-  if(!confirm('Delete this appointment?'))return;
+  if(!confirm('Delete this appointment?')) return;
   if(!GAS){toast('Google Sheets not configured','err');return;}
   showL('Deleting…');
   const r=await gasPost('deleteAppointment',{appointmentId:id});
   hideL();
-  if(r.ok){toast('Deleted','ok');loadAppts();loadDash();}
+  if(r.ok){toast('Appointment deleted','ok');await loadAppts();updateDashCounts();}
   else toast(r.error||'Failed','err');
 }
-function waApptReminder(id){
-  const a=DB.appointments.find(x=>(x.appointmentId||x.id)===id);
+function viewAppt(id){
+  const a=DB.appointments.find(x=>(x.appointmentId||x['Appointment ID'])===id);
   if(!a){toast('Not found','err');return;}
-  const msg=`Dear ${a.patientName},\n\nThis is a reminder from Urban Physio Center.\n\nYour appointment is scheduled for:\n\nDate: ${fmtDate(a.date||a.appointmentDate)}\nTime: ${a.time||a.appointmentTime||'—'}\n\nPhysiotherapist:\nDr. S. Ramesh PT\n\nPlease arrive a few minutes early.\n\nThank you,\nUrban Physio Center`;
-  const num=String(a.phone||'').replace(/\D/g,'');
-  window.open(`https://wa.me/91${num}?text=${encodeURIComponent(msg)}`,'_blank');
+  document.getElementById('view-title').textContent='Appointment: '+a.patientName;
+  document.getElementById('view-bd').innerHTML=`
+    <div style="background:linear-gradient(120deg,var(--navy),var(--navy3));border-radius:11px;padding:18px;color:#fff;margin-bottom:16px;">
+      <div style="font-size:17px;font-weight:800;">${esc(a.patientName)}</div>
+      <div style="font-size:12px;opacity:.7;margin-top:3px;">${fmtDate(a.date)} at ${fmtTime(a.time)}</div>
+    </div>
+    <div>${vrow('Phone',a.phone)}${vrow('Age/Gender',(a.age||'')+(a.gender?' / '+a.gender:''))}${vrow('Condition',a.condition)}${vrow('Status',a.status)}${vrow('Therapist',DOCTOR)}${vrow('Notes',a.notes)}</div>`;
+  document.getElementById('view-ft').innerHTML=`
+    <button class="btn bout bsm" onclick="closeOv('ov-view')">Close</button>
+    <button class="btn bp bsm" onclick="closeOv('ov-view');editAppt('${id}')">✏️ Edit</button>
+    ${(a.phone&&a.phone.trim())?`<button class="btn bsm" style="background:#25d366;color:#fff;" onclick="waAppt('${id}')">💬 Reminder</button>`:''}
+    <button class="btn bout bsm" onclick="printAppt('${id}')">🖨 Print</button>`;
+  openOv('ov-view');
+}
+function waAppt(id){
+  const a=DB.appointments.find(x=>(x.appointmentId||x['Appointment ID'])===id);
+  if(!a){toast('Not found','err');return;}
+  if(!a.phone){toast('No phone number on record','err');return;}
+  const msg=`Dear ${a.patientName},\n\nThis is a reminder from *${CLINIC}*.\n\n📅 *Appointment Date:*\n${fmtDate(a.date)}\n\n🕐 *Appointment Time:*\n${fmtTime(a.time)}\n\n🩺 *Physiotherapist:*\n${DOCTOR}\n\nPlease arrive 10 minutes early.\n\nThank you.`;
+  const phone=a.phone.replace(/\D/g,'');
+  window.open('https://wa.me/'+phone+'?text='+encodeURIComponent(msg),'_blank');
+}
+function printAppt(id){
+  const a=DB.appointments.find(x=>(x.appointmentId||x['Appointment ID'])===id);
+  if(!a){toast('Not found','err');return;}
+  const html=`
+    <div style="font-family:Arial,sans-serif;max-width:500px;margin:0 auto;padding:28px;">
+      <div style="text-align:center;border-bottom:3px solid #1E4E8C;padding-bottom:14px;margin-bottom:18px;">
+        <h1 style="color:#1E4E8C;font-size:20px;margin:0;">${CLINIC}</h1>
+        <p style="color:#F47C20;margin:3px 0;font-size:12px;">Move Better, Live Stronger</p>
+        <p style="font-size:14px;font-weight:700;">APPOINTMENT SLIP</p>
+      </div>
+      <table style="width:100%;border-collapse:collapse;">
+        <tr><td style="padding:9px 12px;border:1px solid #e2e8f0;font-weight:700;background:#f8fafc;width:40%;">Patient Name</td><td style="padding:9px 12px;border:1px solid #e2e8f0;">${esc(a.patientName||'—')}</td></tr>
+        <tr><td style="padding:9px 12px;border:1px solid #e2e8f0;font-weight:700;background:#f8fafc;">Phone Number</td><td style="padding:9px 12px;border:1px solid #e2e8f0;">${esc(a.phone||'—')}</td></tr>
+        <tr><td style="padding:9px 12px;border:1px solid #e2e8f0;font-weight:700;background:#f8fafc;">Condition</td><td style="padding:9px 12px;border:1px solid #e2e8f0;">${esc(a.condition||'—')}</td></tr>
+        <tr><td style="padding:9px 12px;border:1px solid #e2e8f0;font-weight:700;background:#f8fafc;">Appointment Date</td><td style="padding:9px 12px;border:1px solid #e2e8f0;">${fmtDate(a.date)}</td></tr>
+        <tr><td style="padding:9px 12px;border:1px solid #e2e8f0;font-weight:700;background:#f8fafc;">Appointment Time</td><td style="padding:9px 12px;border:1px solid #e2e8f0;">${fmtTime(a.time)}</td></tr>
+        <tr><td style="padding:9px 12px;border:1px solid #e2e8f0;font-weight:700;background:#f8fafc;">Physiotherapist</td><td style="padding:9px 12px;border:1px solid #e2e8f0;font-weight:700;color:#1E4E8C;">${DOCTOR}</td></tr>
+        <tr><td style="padding:9px 12px;border:1px solid #e2e8f0;font-weight:700;background:#f8fafc;">Status</td><td style="padding:9px 12px;border:1px solid #e2e8f0;">${esc(a.status||'Scheduled')}</td></tr>
+      </table>
+      <p style="margin-top:16px;font-size:12px;color:#64748b;text-align:center;">Please arrive 10 minutes before your appointment time.</p>
+      <div style="margin-top:20px;text-align:center;font-size:11px;color:#94a3b8;">${CLINIC} · Printed: ${fmtDate(td())}</div>
+    </div>`;
+  doPrint(html);
 }
 
-// PAYMENTS
-async function loadPay(){
-  if(!GAS){DB.payments=[];renderPay();return;}
-  const r=await gasGet('getPayments');
-  if(r.ok)DB.payments=r.data||[];
-  renderPay();
-}
+// ═══════════════════════════════════════════
+//  PAYMENTS
+// ═══════════════════════════════════════════
 function renderPay(){
-  const q=(document.getElementById('pmsearch')?.value||'').toLowerCase();
-  const list=DB.payments.filter(p=>!q||p.patientName?.toLowerCase().includes(q));
+  const q=(document.getElementById('pmsearch')?.value||'').toLowerCase().trim();
+  const list=DB.payments.filter(p=>!q||(p.patientName||'').toLowerCase().includes(q)||(p.phone||'').includes(q));
   const tb=document.getElementById('pmtbody');
-  if(!list.length){tb.innerHTML=`<tr><td colspan="8"><div class="empty"><div class="ei">💳</div><h3>${GAS?'No payments yet':'Setup Google Sheets first'}</h3></div></td></tr>`;return;}
-  tb.innerHTML=list.map(p=>`<tr>
-    <td><span class="bdg b-blue">${p.paymentId||p.id||'—'}</span></td>
-    <td><strong>${p.patientName||'—'}</strong></td>
-    <td>${p.phone||'—'}</td>
-    <td style="font-weight:700;color:var(--green);">₹${fmt(p.amount||p.paidAmount||0)}</td>
-    <td><span class="bdg ${mb(p.paymentMethod||p.paymentMode)}">${p.paymentMethod||p.paymentMode||'—'}</span></td>
-    <td>${fmtDate(p.paymentDate||p.date||'')}</td>
-    <td>${p.notes||p.remarks||'—'}</td>
+  if(!list.length){tb.innerHTML=`<tr><td colspan="9"><div class="empty"><div class="ei">💳</div><h3>${GAS?'No payments yet':'Setup Google Sheets first'}</h3></div></td></tr>`;return;}
+  tb.innerHTML=list.map(p=>{
+    const pid=esc(p.paymentId||p['Payment ID']||'');
+    return`<tr>
+    <td><span class="bdg b-blue">${esc(p.paymentId||p['Payment ID']||'—')}</span></td>
+    <td><strong>${esc(p.patientName||'—')}</strong></td>
+    <td>${esc(p.phone||'—')}</td>
+    <td>${fmtDate(p.date)}</td>
+    <td>₹${fmt(p.treatmentAmount||0)}</td>
+    <td style="color:var(--green);font-weight:700;">₹${fmt(p.paidAmount||0)}</td>
+    <td><span class="bdg ${mb(p.paymentMode)}">${esc(p.paymentMode||'—')}</span></td>
+    <td>${esc(p.remarks||p.notes||'—')}</td>
     <td><div class="acell">
-      <button class="btn bout bsm" onclick="editPay('${escQ(p.paymentId||p.id)}')">✏️</button>
-      <button class="btn bdanger bsm" onclick="delPay('${escQ(p.paymentId||p.id)}')">🗑</button>
+      <button class="btn bout bxsm" onclick="editPay('${pid}')">✏️</button>
+      <button class="btn bdanger bxsm" onclick="delPay('${pid}')">🗑</button>
+      <button class="btn bout bxsm" onclick="printReceipt('${pid}')">🧾</button>
     </div></td>
-  </tr>`).join('');
+  </tr>`;}).join('');
 }
 function mb(m){return{Cash:'b-green',UPI:'b-blue',Card:'b-purple','Bank Transfer':'b-orange'}[m]||'b-blue';}
 function openPay(){
-  EDITING_PAY=null;
   document.getElementById('pay-modal-title').textContent='Add Payment';
-  document.getElementById('pmmod-id').value='';
+  document.getElementById('pm-edit-id').value='';
   document.getElementById('pm-date').value=td();
-  ['pm-name','pm-phone','pm-amt','pm-notes'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
-  document.getElementById('pm-method').selectedIndex=0;
+  ['pm-name','pm-phone','pm-treat','pm-paid','pm-rem'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
+  document.getElementById('pm-mode').selectedIndex=0;
   openOv('ov-pay');
 }
 function editPay(id){
-  const p=DB.payments.find(x=>(x.paymentId||x.id)===id);
+  const p=DB.payments.find(x=>(x.paymentId||x['Payment ID'])===id);
   if(!p){toast('Not found','err');return;}
-  EDITING_PAY=id;
   document.getElementById('pay-modal-title').textContent='Edit Payment';
-  document.getElementById('pmmod-id').value=id;
-  document.getElementById('pm-name').value=p.patientName||'';
-  document.getElementById('pm-phone').value=p.phone||'';
-  document.getElementById('pm-amt').value=p.amount||p.paidAmount||'';
-  document.getElementById('pm-date').value=p.paymentDate||p.date||'';
-  document.getElementById('pm-notes').value=p.notes||p.remarks||'';
-  const ms=document.getElementById('pm-method');
-  const mv=p.paymentMethod||p.paymentMode||'Cash';
-  for(let i=0;i<ms.options.length;i++)if(ms.options[i].value===mv)ms.selectedIndex=i;
+  document.getElementById('pm-edit-id').value=id;
+  setV('pm-name',p.patientName);setV('pm-phone',p.phone);
+  document.getElementById('pm-date').value=toISO(p.date);
+  setV('pm-treat',p.treatmentAmount);setV('pm-paid',p.paidAmount);
+  setSel('pm-mode',p.paymentMode);setV('pm-rem',p.remarks||p.notes);
   openOv('ov-pay');
 }
 async function savePay(){
   const name=document.getElementById('pm-name').value.trim();
-  const amt=document.getElementById('pm-amt').value;
-  if(!name||!amt){toast('Patient name and amount are required','err');return;}
+  const paid=document.getElementById('pm-paid').value;
+  if(!name||!paid){toast('Patient name and paid amount are required','err');return;}
+  if(isNaN(parseFloat(paid))){toast('Paid amount must be a number','err');return;}
   if(!GAS){toast('Google Sheets not configured. Go to Setup.','err');return;}
-  const pay={patientName:name,phone:document.getElementById('pm-phone').value,amount:amt,paymentMethod:document.getElementById('pm-method').value,paymentDate:document.getElementById('pm-date').value,notes:document.getElementById('pm-notes').value};
-  const action=EDITING_PAY?'updatePayment':'createPayment';
-  if(EDITING_PAY)pay.paymentId=EDITING_PAY;
-  showL('Saving payment…');
-  const r=await gasPost(action,pay);
+  const editId=document.getElementById('pm-edit-id').value;
+  const payload={
+    paymentId:editId||'',
+    patientName:name, phone:document.getElementById('pm-phone').value,
+    date:document.getElementById('pm-date').value,
+    treatmentAmount:parseFloat(document.getElementById('pm-treat').value)||0,
+    paidAmount:parseFloat(paid),
+    paymentMode:document.getElementById('pm-mode').value,
+    remarks:document.getElementById('pm-rem').value,
+  };
+  showL(editId?'Updating payment…':'Saving payment…');
+  const r=await gasPost(editId?'updatePayment':'createPayment',payload);
   hideL();
-  if(r.ok){toast(EDITING_PAY?'Payment updated!':'Payment saved!','ok');closeOv('ov-pay');EDITING_PAY=null;loadPay();loadDash();}
+  if(r.ok){toast(editId?'Updated!':'Payment saved!','ok');closeOv('ov-pay');await loadPay();updateDashRevenue();}
   else toast(r.error||'Save failed','err');
 }
 async function delPay(id){
-  if(!confirm('Delete this payment?'))return;
+  if(!confirm('Delete this payment?')) return;
   if(!GAS){toast('Google Sheets not configured','err');return;}
   showL('Deleting…');
   const r=await gasPost('deletePayment',{paymentId:id});
   hideL();
-  if(r.ok){toast('Deleted','ok');loadPay();loadDash();}
+  if(r.ok){toast('Payment deleted','ok');await loadPay();updateDashRevenue();}
   else toast(r.error||'Failed','err');
 }
+function printReceipt(id){
+  const p=DB.payments.find(x=>(x.paymentId||x['Payment ID'])===id);
+  if(!p){toast('Not found','err');return;}
+  const rcptNo=p.paymentId||p['Payment ID']||'—';
+  const html=`
+    <div style="font-family:Arial,sans-serif;max-width:480px;margin:0 auto;padding:28px;border:2px solid #1E4E8C;border-radius:8px;">
+      <div style="text-align:center;margin-bottom:18px;">
+        <h1 style="color:#1E4E8C;font-size:20px;margin:0;">${CLINIC}</h1>
+        <p style="color:#F47C20;margin:3px 0;font-size:12px;">Move Better, Live Stronger</p>
+        <p style="font-size:14px;font-weight:700;border-top:2px dashed #e2e8f0;border-bottom:2px dashed #e2e8f0;padding:8px 0;margin-top:10px;">PAYMENT RECEIPT</p>
+      </div>
+      <table style="width:100%;border-collapse:collapse;">
+        <tr><td style="padding:8px 10px;font-weight:700;width:45%;color:#64748b;">Receipt No.</td><td style="padding:8px 10px;font-weight:700;">${esc(rcptNo)}</td></tr>
+        <tr style="background:#f8fafc;"><td style="padding:8px 10px;font-weight:700;color:#64748b;">Patient Name</td><td style="padding:8px 10px;">${esc(p.patientName||'—')}</td></tr>
+        <tr><td style="padding:8px 10px;font-weight:700;color:#64748b;">Phone</td><td style="padding:8px 10px;">${esc(p.phone||'—')}</td></tr>
+        <tr style="background:#f8fafc;"><td style="padding:8px 10px;font-weight:700;color:#64748b;">Payment Date</td><td style="padding:8px 10px;">${fmtDate(p.date)}</td></tr>
+        <tr><td style="padding:8px 10px;font-weight:700;color:#64748b;">Treatment Amount</td><td style="padding:8px 10px;">₹${fmt(p.treatmentAmount||0)}</td></tr>
+        <tr style="background:#dcfce7;"><td style="padding:10px 10px;font-weight:800;font-size:15px;color:#166534;">Amount Paid</td><td style="padding:10px 10px;font-weight:800;font-size:15px;color:#166534;">₹${fmt(p.paidAmount||0)}</td></tr>
+        <tr><td style="padding:8px 10px;font-weight:700;color:#64748b;">Payment Mode</td><td style="padding:8px 10px;">${esc(p.paymentMode||'—')}</td></tr>
+        ${(p.remarks||p.notes)?`<tr style="background:#f8fafc;"><td style="padding:8px 10px;font-weight:700;color:#64748b;">Notes</td><td style="padding:8px 10px;">${esc(p.remarks||p.notes)}</td></tr>`:''}
+      </table>
+      <div style="margin-top:20px;border-top:2px dashed #e2e8f0;padding-top:14px;display:flex;justify-content:space-between;align-items:flex-end;">
+        <div><p style="font-size:11px;color:#94a3b8;margin-bottom:20px;">Authorised by</p><p style="font-weight:700;font-size:13px;">${DOCTOR}</p></div>
+        <div style="text-align:right;font-size:10px;color:#94a3b8;"><p>${CLINIC}</p><p>Thank you for your payment!</p></div>
+      </div>
+    </div>`;
+  doPrint(html);
+}
 
-// REVENUE
+// ═══════════════════════════════════════════
+//  REVENUE
+// ═══════════════════════════════════════════
 function setRF(el){
   document.querySelectorAll('.ftab').forEach(t=>t.classList.remove('active'));
   el.classList.add('active');
   RF=el.dataset.rf;
   const cd=document.getElementById('rvcustom');
   cd.style.display=RF==='custom'?'flex':'none';
-  if(RF!=='custom')renderRev();
+  if(RF!=='custom') renderRev();
 }
 function applyRVC(){
   RCF=document.getElementById('rvfrom').value;
@@ -1269,52 +1355,49 @@ function renderRev(){
   const all=DB.payments;
   const todayS=td();
   let list=all;
-  if(RF==='today')list=all.filter(p=>(p.paymentDate||p.date)===todayS);
-  else if(RF==='week'){const ws=nda(6);list=all.filter(p=>{const d=p.paymentDate||p.date;return d>=ws&&d<=todayS;});}
-  else if(RF==='month'){const ms=todayS.substring(0,7)+'-01';list=all.filter(p=>{const d=p.paymentDate||p.date;return d>=ms&&d<=todayS;});}
-  else if(RF==='year'){const ys=todayS.substring(0,4)+'-01-01';list=all.filter(p=>{const d=p.paymentDate||p.date;return d>=ys&&d<=todayS;});}
-  else if(RF==='custom'&&RCF&&RCT)list=all.filter(p=>{const d=p.paymentDate||p.date;return d>=RCF&&d<=RCT;});
+  if(RF==='today') list=all.filter(p=>toISO(p.date)===todayS);
+  else if(RF==='week'){ const ws=nda(6); list=all.filter(p=>{const d=toISO(p.date);return d>=ws&&d<=todayS;}); }
+  else if(RF==='month'){ const ms=todayS.substring(0,7)+'-01'; list=all.filter(p=>{const d=toISO(p.date);return d>=ms&&d<=todayS;}); }
+  else if(RF==='year'){ const ys=todayS.substring(0,4)+'-01-01'; list=all.filter(p=>{const d=toISO(p.date);return d>=ys&&d<=todayS;}); }
+  else if(RF==='custom'&&RCF&&RCT) list=all.filter(p=>{const d=toISO(p.date);return d>=RCF&&d<=RCT;});
 
-  const tot=list.reduce((s,p)=>s+Number(p.amount||p.paidAmount||0),0);
-  const uniq=new Set(list.map(p=>p.patientName)).size;
+  const tot=list.reduce((s,p)=>s+safeNum(p.paidAmount),0);
+  const uniq=new Set(list.map(p=>p.patientName).filter(Boolean)).size;
   document.getElementById('rv-tot').textContent='₹'+fmt(tot);
-  document.getElementById('rv-pts').textContent=uniq;
+  document.getElementById('rv-pts').textContent=uniq||'0';
   document.getElementById('rv-avg').textContent=uniq?'₹'+fmt(Math.round(tot/uniq)):'₹0';
 
   const days=[];
   for(let i=6;i>=0;i--){const d=new Date();d.setDate(d.getDate()-i);days.push({ds:d.toISOString().split('T')[0],lbl:d.toLocaleDateString('en',{weekday:'short'})});}
-  const maxV=Math.max(...days.map(d=>list.filter(p=>(p.paymentDate||p.date)===d.ds).reduce((s,p)=>s+Number(p.amount||p.paidAmount||0),0)),1);
+  const maxV=Math.max(...days.map(d=>list.filter(p=>toISO(p.date)===d.ds).reduce((s,p)=>s+safeNum(p.paidAmount),0)),1);
   document.getElementById('rv-chart').innerHTML=days.map(d=>{
-    const v=list.filter(p=>(p.paymentDate||p.date)===d.ds).reduce((s,p)=>s+Number(p.amount||p.paidAmount||0),0);
+    const v=list.filter(p=>toISO(p.date)===d.ds).reduce((s,p)=>s+safeNum(p.paidAmount),0);
     return`<div class="bc-col"><div class="bcval">${v?'₹'+(v/1000).toFixed(1)+'k':''}</div><div class="bc-bar org" style="height:${Math.max(3,(v/maxV)*125)}px;"></div><div class="bclbl">${d.lbl}</div></div>`;
   }).join('');
 
-  const rvtb=document.getElementById('rvtbody');
-  rvtb.innerHTML=list.length
-    ?list.map(p=>`<tr><td><strong>${p.patientName||'—'}</strong></td><td>${fmtDate(p.paymentDate||p.date||'')}</td><td style="font-weight:700;color:var(--green);">₹${fmt(p.amount||p.paidAmount||0)}</td><td><span class="bdg ${mb(p.paymentMethod||p.paymentMode)}">${p.paymentMethod||p.paymentMode||'—'}</span></td><td>${p.notes||p.remarks||'—'}</td></tr>`).join('')
+  document.getElementById('rvtbody').innerHTML=list.length
+    ?list.map(p=>`<tr><td><strong>${esc(p.patientName||'—')}</strong></td><td>${fmtDate(p.date)}</td><td style="font-weight:700;color:var(--green);">₹${fmt(p.paidAmount||0)}</td><td><span class="bdg ${mb(p.paymentMode)}">${esc(p.paymentMode||'—')}</span></td><td>${esc(p.remarks||p.notes||'—')}</td></tr>`).join('')
     :`<tr><td colspan="5"><div class="empty" style="padding:28px;"><div class="ei">💳</div><p>No payments in this period</p></div></td></tr>`;
 }
 
-// STAFF
-async function loadStaff(){
-  if(!GAS){DB.staff=[];renderStaff();return;}
-  const r=await gasGet('getStaff');
-  if(r.ok)DB.staff=r.data||[];
-  renderStaff();
-}
+// ═══════════════════════════════════════════
+//  STAFF
+// ═══════════════════════════════════════════
 function renderStaff(){
   const tb=document.getElementById('stbody');
   if(!DB.staff.length){tb.innerHTML=`<tr><td colspan="7"><div class="empty"><div class="ei">🧑‍⚕️</div><h3>${GAS?'No staff yet':'Setup Google Sheets first'}</h3></div></td></tr>`;return;}
   const rb={Admin:'b-red',Physiotherapist:'b-blue',Receptionist:'b-green'};
-  tb.innerHTML=DB.staff.map(s=>`<tr>
-    <td><span class="bdg b-blue">${s.staffId||'—'}</span></td>
-    <td><strong>${s.name||'—'}</strong></td>
-    <td>${s.phone||'—'}</td>
-    <td><span class="bdg ${rb[s.role]||'b-blue'}">${s.role||'—'}</span></td>
-    <td>${s.username||'—'}</td>
-    <td><span class="bdg ${s.status==='Active'?'b-green':'b-red'}">${s.status||'—'}</span></td>
-    <td><button class="btn bdanger bsm" onclick="delStaff('${escQ(s.staffId)}')">Remove</button></td>
-  </tr>`).join('');
+  tb.innerHTML=DB.staff.map(s=>{
+    const sid=esc(s.staffId||s['Staff ID']||'');
+    return`<tr>
+    <td><span class="bdg b-blue">${esc(s.staffId||s['Staff ID']||'—')}</span></td>
+    <td><strong>${esc(s.name||'—')}</strong></td>
+    <td>${esc(s.phone||'—')}</td>
+    <td><span class="bdg ${rb[s.role]||'b-blue'}">${esc(s.role||'—')}</span></td>
+    <td>${esc(s.username||'—')}</td>
+    <td><span class="bdg ${(s.status||'Active')==='Active'?'b-green':'b-red'}">${esc(s.status||'Active')}</span></td>
+    <td><button class="btn bdanger bsm" onclick="delStaff('${sid}')">Remove</button></td>
+  </tr>`;}).join('');
 }
 function openStaff(){
   ['st-name','st-phone','st-user','st-pass'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
@@ -1326,57 +1409,76 @@ async function saveStaff(){
   const name=document.getElementById('st-name').value.trim();
   if(!name){toast('Name is required','err');return;}
   if(!GAS){toast('Google Sheets not configured. Go to Setup.','err');return;}
-  const pay={name,phone:document.getElementById('st-phone').value,role:document.getElementById('st-role').value,username:document.getElementById('st-user').value,password:document.getElementById('st-pass').value,status:document.getElementById('st-stat').value};
+  const payload={name,phone:document.getElementById('st-phone').value,role:document.getElementById('st-role').value,username:document.getElementById('st-user').value,password:document.getElementById('st-pass').value,status:document.getElementById('st-stat').value};
   showL('Saving…');
-  const r=await gasPost('createStaff',pay);
+  const r=await gasPost('createStaff',payload);
   hideL();
-  if(r.ok){toast('Staff added!','ok');closeOv('ov-staff');loadStaff();}
+  if(r.ok){toast('Staff added!','ok');closeOv('ov-staff');await loadStaff();}
   else toast(r.error||'Save failed','err');
 }
 async function delStaff(id){
-  if(!confirm('Remove this staff member?'))return;
+  if(!confirm('Remove this staff member?')) return;
   if(!GAS){toast('Google Sheets not configured','err');return;}
   showL('Removing…');
   const r=await gasPost('deleteStaff',{staffId:id});
   hideL();
-  if(r.ok){toast('Removed','ok');loadStaff();}
+  if(r.ok){toast('Removed','ok');await loadStaff();}
   else toast(r.error||'Failed','err');
 }
 
-// SETUP
+// ═══════════════════════════════════════════
+//  SETUP
+// ═══════════════════════════════════════════
 function initSetup(){
-  if(GAS){document.getElementById('gasurl').value=GAS;setUS('ok','Connected: '+GAS.substring(0,48)+'…');}
-  document.getElementById('gascode').textContent=GAS_CODE;
+  if(GAS){ document.getElementById('gasurl').value=GAS; setUS('ok','Connected: '+GAS.substring(0,48)+'…'); }
+  document.getElementById('gascode').textContent=GAS_BACKEND;
 }
 function saveGAS(){
   const url=document.getElementById('gasurl').value.trim();
   if(!url){toast('Please enter a URL','err');return;}
-  GAS=url;localStorage.setItem('upc_gas',url);
-  setUS('ok','URL saved.');toast('URL saved!','ok');
+  GAS=url; localStorage.setItem('upc_gas',url);
+  setUS('ok','URL saved.');
+  toast('URL saved!','ok');
   testGAS();
 }
 async function testGAS(){
   const url=document.getElementById('gasurl').value.trim();
   if(!url){toast('Enter URL first','err');return;}
-  GAS=url;setUS('pending','Testing connection…');
+  GAS=url; setUS('pending','Testing connection…');
   const r=await gasGet('ping');
-  if(r.ok){setUS('ok','Connected successfully!');toast('Connection successful!','ok');loadAll();}
-  else{setUS('err','Failed: '+(r.error||'Check URL'));toast('Connection failed: '+(r.error||'Check URL'),'err');}
+  if(r.ok){ setUS('ok','Connected successfully!'); toast('Connection successful!','ok'); refreshAll(); }
+  else { setUS('err','Failed: '+(r.error||'Check URL')); toast('Connection failed: '+(r.error||'Check URL'),'err'); }
 }
 function setUS(state,msg){
-  const dot=document.getElementById('udot');
-  const txt=document.getElementById('ustat');
-  dot.className='udot '+(state==='ok'?'dg':state==='err'?'dr':'dgray');
-  txt.textContent=msg;
+  document.getElementById('udot').className='udot '+(state==='ok'?'dg':state==='err'?'dr':'dgray');
+  document.getElementById('ustat').textContent=msg;
 }
 function copyCode(){
-  navigator.clipboard.writeText(GAS_CODE).then(()=>toast('Code copied!','ok')).catch(()=>toast('Select and copy manually','err'));
+  navigator.clipboard.writeText(GAS_BACKEND).then(()=>toast('Code copied!','ok')).catch(()=>toast('Select and copy manually','err'));
 }
 
-const GAS_CODE = `// ====================================================
+// ═══════════════════════════════════════════
+//  UTILS
+// ═══════════════════════════════════════════
+function esc(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function setV(id,val){ const el=document.getElementById(id); if(el) el.value=val||''; }
+function setSel(id,val){ const el=document.getElementById(id); if(el&&val){ for(let o of el.options){ if(o.value===val||o.text===val){o.selected=true;break;} } } }
+function vrow(l,v){ return v?`<div style="display:flex;gap:8px;padding:6px 0;border-bottom:1px solid var(--g50);font-size:13px;"><span style="min-width:155px;font-weight:600;color:var(--g600);flex-shrink:0;">${l}</span><span style="color:var(--g800);white-space:pre-wrap;">${esc(v)}</span></div>`:''; }
+function doPrint(html){
+  const w=window.open('','_blank','width=800,height=700');
+  w.document.write(`<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Print</title><style>body{margin:0;background:#fff;}@media print{@page{margin:12mm;}}</style></head><body>${html}<script>window.onload=function(){window.print();setTimeout(()=>window.close(),1000);};<\/script></body></html>`);
+  w.document.close();
+}
+
+// ═══════════════════════════════════════════
+//  GOOGLE APPS SCRIPT BACKEND CODE
+// ═══════════════════════════════════════════
+const GAS_BACKEND = `// ====================================================
 // URBAN PHYSIO CENTER – Google Apps Script Backend
 // Deploy: Web App | Execute as: Me | Access: Anyone
-// Replace SS_ID with your Google Spreadsheet ID
+// Step 1: Replace SS_ID with your Spreadsheet ID
+// Step 2: Deploy as Web App
+// Step 3: Copy the URL to the portal Setup page
 // ====================================================
 
 const SS_ID = 'YOUR_SPREADSHEET_ID_HERE';
@@ -1385,289 +1487,316 @@ function doGet(e)  { return handle(e); }
 function doPost(e) { return handle(e); }
 
 function handle(e) {
-  const action = e.parameter.action;
+  const action = (e && e.parameter && e.parameter.action) ? e.parameter.action : '';
   let body = {};
-  try { body = JSON.parse(e.postData ? e.postData.contents : '{}'); } catch(_){}
+  try {
+    if (e && e.postData && e.postData.contents) {
+      body = JSON.parse(e.postData.contents);
+    }
+  } catch(_) {}
+
   let result;
   try {
     switch(action) {
-      case 'ping':                 result = {ok:true, message:'Connected'}; break;
-      case 'getPatients':          result = getPatients(); break;
-      case 'updatePatient':        result = updatePatient(body); break;
-      case 'deletePatient':        result = deletePatient(body); break;
-      case 'getAssessments':       result = getAssessments(); break;
-      case 'createAssessment':     result = createAssessment(body); break;
-      case 'getAppointments':      result = getAppointments(); break;
-      case 'createAppointment':    result = createAppointment(body); break;
-      case 'updateAppointment':    result = updateAppointment(body); break;
-      case 'deleteAppointment':    result = deleteAppointment(body); break;
-      case 'getPayments':          result = getPayments(); break;
-      case 'createPayment':        result = createPayment(body); break;
-      case 'updatePayment':        result = updatePayment(body); break;
-      case 'deletePayment':        result = deletePayment(body); break;
-      case 'getStaff':             result = getStaff(); break;
-      case 'createStaff':          result = createStaff(body); break;
-      case 'deleteStaff':          result = deleteStaff(body); break;
-      case 'getDashboard':         result = getDashboard(); break;
-      default:                     result = {ok:false, error:'Unknown action: '+action};
+      case 'ping':                result = {ok:true, message:'Connected to Urban Physio Center'}; break;
+      case 'getPatients':         result = getAll('Patients'); break;
+      case 'createPatient':       result = upsertPatient(body); break;
+      case 'deletePatient':       result = deleteRow('Patients', 'Patient ID', body.patientId); break;
+      case 'getAssessments':      result = getAll('Assessments'); break;
+      case 'createAssessment':    result = createAssessment(body); break;
+      case 'updateAssessment':    result = updateAssessment(body); break;
+      case 'deleteAssessment':    result = deleteRow('Assessments', 'Assessment ID', body.assessmentId); break;
+      case 'getAppointments':     result = getAll('Appointments'); break;
+      case 'createAppointment':   result = createAppointment(body); break;
+      case 'updateAppointment':   result = updateAppointment(body); break;
+      case 'deleteAppointment':   result = deleteRow('Appointments', 'Appointment ID', body.appointmentId); break;
+      case 'getPayments':         result = getAll('Payments'); break;
+      case 'createPayment':       result = createPayment(body); break;
+      case 'updatePayment':       result = updatePayment(body); break;
+      case 'deletePayment':       result = deleteRow('Payments', 'Payment ID', body.paymentId); break;
+      case 'getStaff':            result = getAll('Staff'); break;
+      case 'createStaff':         result = createStaff(body); break;
+      case 'deleteStaff':         result = deleteRow('Staff', 'Staff ID', body.staffId); break;
+      default:                    result = {ok:false, error:'Unknown action: ' + action};
     }
   } catch(err) {
-    result = {ok:false, error:err.message};
+    result = {ok:false, error: err.toString()};
   }
+
   return ContentService
     .createTextOutput(JSON.stringify(result))
     .setMimeType(ContentService.MimeType.JSON);
 }
 
+// ── SPREADSHEET HELPERS ──────────────────────────
+
 function ss() { return SpreadsheetApp.openById(SS_ID); }
 
-const HEADERS = {
-  Patients:     ['Patient ID','Name','Age','Gender','Phone','Address','Occupation','Date Added'],
-  Assessments:  ['Assessment ID','Date','Patient Name','Age','Gender','Address','Occupation','Phone',
-                 'BP','DM','Thyroid','Implants','Chief Complaints','Past History',
-                 'Pain Site','Pain Side','Duration','Pain Nature','Aggravating Factors','Relieving Factors',
-                 'Muscle Weak','Muscle Tight','Pain Scale','Body Chart Marks','Body Chart Notes',
-                 'Restricted Activities','Investigation Notes','Diagnosis',
-                 'Lengthening Exercises','Strengthening Exercises','Modalities',
-                 'Follow Up Date','Assessment Notes','Therapist'],
-  Appointments: ['Appointment ID','Patient Name','Phone','Condition','Appointment Date','Appointment Time','Notes'],
-  Payments:     ['Payment ID','Patient Name','Phone','Amount','Payment Method','Payment Date','Notes'],
-  Staff:        ['Staff ID','Name','Phone','Role','Username','Password','Status']
+// Column definitions per sheet
+const COLS = {
+  Patients:    ['Patient ID','Name','Age','Gender','Phone','Occupation','Date Added'],
+  Assessments: ['Assessment ID','Patient ID','Patient Name','Phone','Age','Gender','Occupation','Date',
+                'Blood Pressure','Diabetes','Thyroid','Implants','Chief Complaint','Past History',
+                'Pain History','Physical Examination','Posture Analysis','Range Of Motion',
+                'Muscle Strength','Functional Limitations','Restricted Activities','Diagnosis',
+                'Lengthening Exercises','Strengthening Exercises','Home Exercise Program',
+                'Session Notes','Follow Up Date'],
+  Appointments:['Appointment ID','Patient Name','Phone','Age','Gender','Date','Time','Condition','Status','Notes'],
+  Payments:    ['Payment ID','Patient Name','Phone','Date','Treatment Amount','Paid Amount','Payment Mode','Remarks'],
+  Staff:       ['Staff ID','Name','Phone','Role','Username','Password','Status']
 };
+
+// Convert header to camelCase key
+function cam(h) {
+  return h.replace(/(?:^\\w|[A-Z]|\\b\\w)/g,(w,i)=>i===0?w.toLowerCase():w.toUpperCase()).replace(/[\\s]+/g,'');
+}
 
 function getSheet(name) {
   const spreadsheet = ss();
   let sheet = spreadsheet.getSheetByName(name);
   if (!sheet) {
     sheet = spreadsheet.insertSheet(name);
-    if (HEADERS[name]) {
-      sheet.getRange(1,1,1,HEADERS[name].length).setValues([HEADERS[name]]);
-      sheet.getRange(1,1,1,HEADERS[name].length)
-        .setBackground('#1E4E8C').setFontColor('#ffffff').setFontWeight('bold');
+    if (COLS[name]) {
+      const range = sheet.getRange(1, 1, 1, COLS[name].length);
+      range.setValues([COLS[name]]);
+      range.setBackground('#1E4E8C').setFontColor('#ffffff').setFontWeight('bold');
+      sheet.setFrozenRows(1);
     }
   }
   return sheet;
 }
 
-function toObjs(sheet) {
+// Read all rows as array of objects
+function getAll(sheetName) {
+  const sheet = getSheet(sheetName);
   const data = sheet.getDataRange().getValues();
-  if (data.length < 2) return [];
-  const hdrs = data[0];
-  return data.slice(1).map(row => {
+  if (data.length < 2) return {ok:true, data:[]};
+  const headers = data[0].map(h => cam(String(h)));
+  const rows = data.slice(1).map(row => {
     const obj = {};
-    hdrs.forEach((h,i) => { obj[cam(h)] = row[i] === '' ? '' : String(row[i]); });
+    headers.forEach((h, i) => {
+      let val = row[i];
+      // Convert Date objects from Sheets
+      if (val instanceof Date) {
+        if (val.getFullYear() < 1950 || val.getFullYear() > 2100) {
+          val = '';
+        } else {
+          val = Utilities.formatDate(val, 'Asia/Kolkata', 'yyyy-MM-dd');
+        }
+      }
+      obj[h] = val === null || val === undefined ? '' : String(val);
+    });
     return obj;
+  }).filter(row => {
+    // Filter out completely empty rows
+    return Object.values(row).some(v => v && String(v).trim() !== '');
   });
+  return {ok:true, data:rows};
 }
 
-function cam(s) {
-  return s.replace(/(?:^\\w|[A-Z]|\\b\\w)/g,(w,i)=>i===0?w.toLowerCase():w.toUpperCase()).replace(/[\\s]+/g,'');
-}
-
-// PATIENTS
-function getPatients() {
-  return {ok:true, data: toObjs(getSheet('Patients'))};
-}
-function createPatient(d) {
-  const sheet = getSheet('Patients');
-  const existing = toObjs(sheet);
-  if (d.phone && existing.find(p => p.phone === d.phone)) return {ok:true, message:'exists'};
-  const count = sheet.getLastRow() - 1;
-  const id = 'UPC' + String(count + 1).padStart(3,'0');
-  sheet.appendRow([id, d.name||'', d.age||'', d.gender||'', d.phone||'', d.address||'', d.occupation||'',
-    new Date().toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'})]);
-  return {ok:true, patientId:id};
-}
-function updatePatient(d) {
-  const sheet = getSheet('Patients');
-  const rows = sheet.getDataRange().getValues();
-  for (let i = 1; i < rows.length; i++) {
-    if (String(rows[i][0]) === String(d.patientId)) {
-      sheet.getRange(i+1,2,1,7).setValues([[d.name||'',d.age||'',d.gender||'',d.phone||'',d.address||'',d.occupation||'',rows[i][7]]]);
+// Delete row by column value
+function deleteRow(sheetName, colHeader, value) {
+  if (!value) return {ok:false, error:'No ID provided'};
+  const sheet = getSheet(sheetName);
+  const data = sheet.getDataRange().getValues();
+  const headers = data[0].map(h => String(h).trim());
+  const colIdx = headers.indexOf(colHeader);
+  if (colIdx === -1) return {ok:false, error:'Column not found: '+colHeader};
+  for (let i = data.length - 1; i >= 1; i--) {
+    if (String(data[i][colIdx]).trim() === String(value).trim()) {
+      sheet.deleteRow(i + 1);
       return {ok:true};
     }
   }
-  return {ok:false,error:'Patient not found'};
+  return {ok:false, error:'Record not found: '+value};
 }
-function deletePatient(d) {
+
+// Get next sequential ID
+function nextId(sheet, prefix, padLen) {
+  const count = Math.max(sheet.getLastRow() - 1, 0);
+  return prefix + String(count + 1).padStart(padLen || 4, '0');
+}
+
+// Today as yyyy-MM-dd IST
+function todayIST() {
+  return Utilities.formatDate(new Date(), 'Asia/Kolkata', 'yyyy-MM-dd');
+}
+
+// ── PATIENTS ─────────────────────────────────────
+
+function upsertPatient(d) {
+  if (!d.name) return {ok:false, error:'Name required'};
   const sheet = getSheet('Patients');
-  const rows = sheet.getDataRange().getValues();
-  for (let i = rows.length-1; i >= 1; i--) {
-    if (String(rows[i][0]) === String(d.patientId)) { sheet.deleteRow(i+1); break; }
+  const data = sheet.getDataRange().getValues();
+  const headers = data[0].map(h => String(h).trim());
+  const phoneIdx = headers.indexOf('Phone');
+  const idIdx = headers.indexOf('Patient ID');
+
+  // Check for existing by phone
+  if (d.phone && phoneIdx !== -1) {
+    for (let i = 1; i < data.length; i++) {
+      if (String(data[i][phoneIdx]).trim() === String(d.phone).trim()) {
+        // Update existing
+        const nameIdx = headers.indexOf('Name');
+        if (nameIdx !== -1) sheet.getRange(i+1, nameIdx+1).setValue(d.name);
+        if (d.age) { const ai=headers.indexOf('Age'); if(ai!==-1) sheet.getRange(i+1,ai+1).setValue(d.age); }
+        if (d.gender) { const gi=headers.indexOf('Gender'); if(gi!==-1) sheet.getRange(i+1,gi+1).setValue(d.gender); }
+        if (d.occupation) { const oi=headers.indexOf('Occupation'); if(oi!==-1) sheet.getRange(i+1,oi+1).setValue(d.occupation); }
+        return {ok:true, patientId:String(data[i][idIdx]), updated:true};
+      }
+    }
   }
-  return {ok:true};
+  // Create new
+  const id = nextId(sheet, 'UPC', 3);
+  sheet.appendRow([id, d.name||'', d.age||'', d.gender||'', d.phone||'', d.occupation||'',
+    d.dateAdded || todayIST()]);
+  return {ok:true, patientId:id, created:true};
 }
 
-// ASSESSMENTS
-function getAssessments() {
-  return {ok:true, data: toObjs(getSheet('Assessments'))};
-}
+// ── ASSESSMENTS ──────────────────────────────────
+
 function createAssessment(d) {
-  createPatient({name:d.patientName, age:d.age, gender:d.gender, phone:d.phone, address:d.address, occupation:d.occupation});
-  const pSheet = getSheet('Patients');
-  const patients = toObjs(pSheet);
-  const patient = patients.find(p => p.phone === d.phone) || {};
+  if (!d.patientName) return {ok:false, error:'Patient name required'};
+  // Auto-create/update patient
+  const patResult = upsertPatient({
+    name:d.patientName, age:d.age, gender:d.gender,
+    phone:d.phone, occupation:d.occupation
+  });
+
   const sheet = getSheet('Assessments');
-  const count = sheet.getLastRow() - 1;
-  const id = 'ASS' + String(count + 1).padStart(4,'0');
-  const dateStr = d.date || new Date().toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'});
+  const id = nextId(sheet, 'ASS', 4);
   sheet.appendRow([
-    id, dateStr, d.patientName||'', d.age||'', d.gender||'', d.address||'', d.occupation||'', d.phone||'',
-    d.bloodPressure||'', d.diabetes||'', d.thyroid||'', d.implants||'',
-    d.chiefComplaints||'', d.pastHistory||'',
-    d.painSite||'', d.painSide||'', d.duration||'', d.painNature||'',
-    d.aggravatingFactors||'', d.relievingFactors||'',
-    d.muscleWeak||'', d.muscleTight||'', d.painScale||'', d.bodyChartMarks||'', d.bodyChartNotes||'',
-    d.restrictedActivities||'', d.investigationNotes||'', d.diagnosis||'',
-    d.lengtheningExercises||'', d.strengtheningExercises||'', d.modalities||'',
-    d.followUpDate||'', d.assessmentNotes||'', d.therapist||'Dr. S. Ramesh PT'
+    id,
+    patResult.patientId || '',
+    d.patientName || '', d.phone || '', d.age || '', d.gender || '', d.occupation || '',
+    d.date || todayIST(),
+    d.bloodPressure || '', d.diabetes || '', d.thyroid || '', d.implants || '',
+    d.chiefComplaint || '', d.pastHistory || '', d.painHistory || '',
+    d.physicalExamination || '', d.postureAnalysis || '', d.rangeOfMotion || '',
+    d.muscleStrength || '', d.functionalLimitations || '', d.restrictedActivities || '',
+    d.diagnosis || '', d.lengtheningExercises || '', d.strengtheningExercises || '',
+    d.homeExerciseProgram || '', d.sessionNotes || '', d.followUpDate || ''
   ]);
-  return {ok:true, assessmentId:id};
+  return {ok:true, assessmentId:id, patientId:patResult.patientId};
 }
 
-// APPOINTMENTS
-function getAppointments() {
-  return {ok:true, data: toObjs(getSheet('Appointments'))};
+function updateAssessment(d) {
+  if (!d.assessmentId) return {ok:false, error:'Assessment ID required'};
+  const sheet = getSheet('Assessments');
+  const data = sheet.getDataRange().getValues();
+  const headers = data[0].map(h => String(h).trim());
+  const idIdx = headers.indexOf('Assessment ID');
+  for (let i = 1; i < data.length; i++) {
+    if (String(data[i][idIdx]).trim() === String(d.assessmentId).trim()) {
+      const map = {
+        'Patient Name':d.patientName,'Phone':d.phone,'Age':d.age,'Gender':d.gender,
+        'Occupation':d.occupation,'Date':d.date,'Blood Pressure':d.bloodPressure,
+        'Diabetes':d.diabetes,'Thyroid':d.thyroid,'Implants':d.implants,
+        'Chief Complaint':d.chiefComplaint,'Past History':d.pastHistory,
+        'Pain History':d.painHistory,'Physical Examination':d.physicalExamination,
+        'Posture Analysis':d.postureAnalysis,'Range Of Motion':d.rangeOfMotion,
+        'Muscle Strength':d.muscleStrength,'Functional Limitations':d.functionalLimitations,
+        'Restricted Activities':d.restrictedActivities,'Diagnosis':d.diagnosis,
+        'Lengthening Exercises':d.lengtheningExercises,'Strengthening Exercises':d.strengtheningExercises,
+        'Home Exercise Program':d.homeExerciseProgram,'Session Notes':d.sessionNotes,
+        'Follow Up Date':d.followUpDate
+      };
+      Object.entries(map).forEach(([col, val]) => {
+        const ci = headers.indexOf(col);
+        if (ci !== -1 && val !== undefined) sheet.getRange(i+1, ci+1).setValue(val || '');
+      });
+      return {ok:true};
+    }
+  }
+  return {ok:false, error:'Assessment not found'};
 }
+
+// ── APPOINTMENTS ─────────────────────────────────
+
 function createAppointment(d) {
+  if (!d.patientName) return {ok:false, error:'Patient name required'};
   const sheet = getSheet('Appointments');
-  const count = sheet.getLastRow() - 1;
-  const id = 'APT' + String(count + 1).padStart(4,'0');
-  sheet.appendRow([id, d.patientName||'', d.phone||'', d.condition||'', d.date||'', d.time||'', d.notes||'']);
+  const id = nextId(sheet, 'APT', 4);
+  sheet.appendRow([id, d.patientName||'', d.phone||'', d.age||'', d.gender||'',
+    d.date||'', d.time||'', d.condition||'', d.status||'Scheduled', d.notes||'']);
   return {ok:true, appointmentId:id};
 }
+
 function updateAppointment(d) {
+  if (!d.appointmentId) return {ok:false, error:'Appointment ID required'};
   const sheet = getSheet('Appointments');
-  const rows = sheet.getDataRange().getValues();
-  for (let i = 1; i < rows.length; i++) {
-    if (String(rows[i][0]) === String(d.appointmentId)) {
-      sheet.getRange(i+1,2,1,6).setValues([[d.patientName||'',d.phone||'',d.condition||'',d.date||'',d.time||'',d.notes||'']]);
+  const data = sheet.getDataRange().getValues();
+  const headers = data[0].map(h => String(h).trim());
+  const idIdx = headers.indexOf('Appointment ID');
+  for (let i = 1; i < data.length; i++) {
+    if (String(data[i][idIdx]).trim() === String(d.appointmentId).trim()) {
+      const map = {
+        'Patient Name':d.patientName,'Phone':d.phone,'Age':d.age,'Gender':d.gender,
+        'Date':d.date,'Time':d.time,'Condition':d.condition,'Status':d.status,'Notes':d.notes
+      };
+      Object.entries(map).forEach(([col, val]) => {
+        const ci = headers.indexOf(col);
+        if (ci !== -1 && val !== undefined) sheet.getRange(i+1, ci+1).setValue(val || '');
+      });
       return {ok:true};
     }
   }
-  return {ok:false,error:'Not found'};
-}
-function deleteAppointment(d) {
-  const sheet = getSheet('Appointments');
-  const rows = sheet.getDataRange().getValues();
-  for (let i = rows.length-1; i >= 1; i--) {
-    if (String(rows[i][0]) === String(d.appointmentId)) { sheet.deleteRow(i+1); break; }
-  }
-  return {ok:true};
+  return {ok:false, error:'Appointment not found'};
 }
 
-// PAYMENTS
-function getPayments() {
-  return {ok:true, data: toObjs(getSheet('Payments'))};
-}
+// ── PAYMENTS ─────────────────────────────────────
+
 function createPayment(d) {
+  if (!d.patientName) return {ok:false, error:'Patient name required'};
   const sheet = getSheet('Payments');
-  const count = sheet.getLastRow() - 1;
-  const id = 'PAY' + String(count + 1).padStart(4,'0');
-  sheet.appendRow([id, d.patientName||'', d.phone||'', Number(d.amount)||0, d.paymentMethod||'Cash', d.paymentDate||'', d.notes||'']);
+  const id = nextId(sheet, 'PAY', 4);
+  sheet.appendRow([id, d.patientName||'', d.phone||'', d.date||'',
+    Number(d.treatmentAmount)||0, Number(d.paidAmount)||0,
+    d.paymentMode||'Cash', d.remarks||'']);
   return {ok:true, paymentId:id};
 }
+
 function updatePayment(d) {
+  if (!d.paymentId) return {ok:false, error:'Payment ID required'};
   const sheet = getSheet('Payments');
-  const rows = sheet.getDataRange().getValues();
-  for (let i = 1; i < rows.length; i++) {
-    if (String(rows[i][0]) === String(d.paymentId)) {
-      sheet.getRange(i+1,2,1,6).setValues([[d.patientName||'',d.phone||'',Number(d.amount)||0,d.paymentMethod||'Cash',d.paymentDate||'',d.notes||'']]);
+  const data = sheet.getDataRange().getValues();
+  const headers = data[0].map(h => String(h).trim());
+  const idIdx = headers.indexOf('Payment ID');
+  for (let i = 1; i < data.length; i++) {
+    if (String(data[i][idIdx]).trim() === String(d.paymentId).trim()) {
+      const map = {
+        'Patient Name':d.patientName,'Phone':d.phone,'Date':d.date,
+        'Treatment Amount':Number(d.treatmentAmount)||0,
+        'Paid Amount':Number(d.paidAmount)||0,
+        'Payment Mode':d.paymentMode,'Remarks':d.remarks
+      };
+      Object.entries(map).forEach(([col, val]) => {
+        const ci = headers.indexOf(col);
+        if (ci !== -1 && val !== undefined) sheet.getRange(i+1, ci+1).setValue(val === '' ? '' : val);
+      });
       return {ok:true};
     }
   }
-  return {ok:false,error:'Not found'};
-}
-function deletePayment(d) {
-  const sheet = getSheet('Payments');
-  const rows = sheet.getDataRange().getValues();
-  for (let i = rows.length-1; i >= 1; i--) {
-    if (String(rows[i][0]) === String(d.paymentId)) { sheet.deleteRow(i+1); break; }
-  }
-  return {ok:true};
+  return {ok:false, error:'Payment not found'};
 }
 
-// STAFF
-function getStaff() {
-  return {ok:true, data: toObjs(getSheet('Staff'))};
-}
+// ── STAFF ─────────────────────────────────────────
+
 function createStaff(d) {
+  if (!d.name) return {ok:false, error:'Name required'};
   const sheet = getSheet('Staff');
-  const count = sheet.getLastRow() - 1;
-  const id = 'STF' + String(count + 1).padStart(3,'0');
-  sheet.appendRow([id, d.name||'', d.phone||'', d.role||'', d.username||'', d.password||'', d.status||'Active']);
+  const id = nextId(sheet, 'STF', 3);
+  sheet.appendRow([id, d.name||'', d.phone||'', d.role||'',
+    d.username||'', d.password||'', d.status||'Active']);
   return {ok:true, staffId:id};
-}
-function deleteStaff(d) {
-  const sheet = getSheet('Staff');
-  const rows = sheet.getDataRange().getValues();
-  for (let i = rows.length-1; i >= 1; i--) {
-    if (String(rows[i][0]) === String(d.staffId)) { sheet.deleteRow(i+1); break; }
-  }
-  return {ok:true};
-}
-
-// DASHBOARD
-function getDashboard() {
-  const today = new Date();
-  const todayStr = today.toLocaleDateString('en-CA'); // YYYY-MM-DD
-  const monthStart = todayStr.substring(0,7) + '-01';
-
-  const assessments  = toObjs(getSheet('Assessments'));
-  const patients     = toObjs(getSheet('Patients'));
-  const appointments = toObjs(getSheet('Appointments'));
-  const payments     = toObjs(getSheet('Payments'));
-
-  // Revenue uses paymentDate field
-  const todayRevenue = payments.filter(p=>p.paymentDate===todayStr).reduce((s,p)=>s+Number(p.amount||0),0);
-  const monthRevenue = payments.filter(p=>p.paymentDate>=monthStart).reduce((s,p)=>s+Number(p.amount||0),0);
-  const todayAppts   = appointments.filter(a=>a.appointmentDate===todayStr||a.date===todayStr);
-
-  // Top Conditions from Assessment Chief Complaints
-  const condMap = {};
-  assessments.forEach(a => {
-    const cc = (a.chiefComplaints||'').trim();
-    if (!cc) return;
-    cc.split(/[,\\n;]+/).forEach(c => {
-      const t = c.trim();
-      if (t) condMap[t] = (condMap[t]||0) + 1;
-    });
-  });
-  const topConditions = Object.entries(condMap)
-    .sort((a,b)=>b[1]-a[1]).slice(0,6)
-    .map(([condition,count])=>({condition,count}));
-
-  // Weekly revenue
-  const weeklyRevenue = [];
-  for (let i=6; i>=0; i--) {
-    const d = new Date();
-    d.setDate(d.getDate() - i);
-    const ds = d.toLocaleDateString('en-CA');
-    const lbl = d.toLocaleDateString('en',{weekday:'short'});
-    const amount = payments.filter(p=>p.paymentDate===ds).reduce((s,p)=>s+Number(p.amount||0),0);
-    weeklyRevenue.push({label:lbl, amount});
-  }
-
-  return {
-    ok: true,
-    data: {
-      totalPatients:      patients.length,
-      todayAppointments:  todayAppts.length,
-      todayRevenue,
-      monthRevenue,
-      topConditions,
-      weeklyRevenue,
-      recentPatients:     patients.slice(-5).reverse(),
-      recentAppointments: appointments.slice(-5).reverse(),
-      recentPayments:     payments.slice(-5).reverse()
-    }
-  };
 }`;
 
-// init
-window.addEventListener('load',()=>{
-  if(GAS&&document.getElementById('gasurl'))document.getElementById('gasurl').value=GAS;
+// init on window load
+window.addEventListener('load', () => {
+  if(GAS && document.getElementById('gasurl')) {
+    document.getElementById('gasurl').value = GAS;
+  }
 });
 </script>
 </body>
-</html>
+</html>o
