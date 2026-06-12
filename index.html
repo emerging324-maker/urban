@@ -784,7 +784,11 @@ function renderPat(){
     </div></td>
   </tr>`).join('');
 }
-function escQ(s){return String(s||'').replace(/'/g,"\\'");}
+function escQ(s){return String(s||'').replace(/\\/g,'\\\\').replace(/'/g,"\\'").replace(/"/g,'&quot;');}
+// Safe record lookup map — avoids any quote/special-char issues in onclick
+const _REC={};
+function _reg(obj){const k='r'+Math.random().toString(36).slice(2);_REC[k]=obj;return k;}
+function _get(k){return _REC[k]||null;}
 
 function viewPatAssess(phone){
   const a=DB.assessments.find(x=>x.phone===phone)||DB.assessments.find(x=>x.patientPhone===phone);
